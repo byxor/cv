@@ -2,7 +2,7 @@ from collections import namedtuple
 
 Date = namedtuple("Date", "month year")
 Language = namedtuple("Language", "name usage")
-ExtraLanguage = lambda name: Language(name, "")
+ExtraLanguage = namedtuple("ExtraLanguage", "name")
 Hackathon = namedtuple("Hackathon", "name year description")
 Job = namedtuple("Job", "company location role start_date end_date technologies description")
 Project = namedtuple("Project", "name link description")
@@ -22,7 +22,7 @@ PRIMARY_LANGUAGES = [
     Language("C++",              "Used to program ASICs in Arista switches and solve competitive programming problems."),
     Language("Kotlin",           "Used in production environment to write HTTP backend."),
     Language("JavaScript (ES6)", "Used for web development with AngularJS. Familiar with ES6 features."),
-    Language("C",                "Taught me about memory management, the stack, heap and pointers."),
+    Language("C",                "Taught me about memory management, the stack, the heap, pointers."),
 ]
 
 EXTRA_LANGUAGES = [
@@ -59,7 +59,11 @@ PROJECTS = [
 
     Project("Passflip",
             github("passflip"),
-            "A lightweight SHA224-based password manager.")
+            "A lightweight SHA224-based password manager."),
+
+    Project("Slimput",
+            github("slimput"),
+            "A faster way of scanning standard input for Java."),
 ]
 
 HACKATHONS = [
