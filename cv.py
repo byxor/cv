@@ -35,8 +35,21 @@ EXTRA_LANGUAGES = [
 ]
 
 JOBS = [
-    Job("Instil Software", "Belfast", "Software Engineering Intern", Date("July", 2016), Date("September", 2016)),
-    Job("Arista Networks", "Dublin",  "Software Engineering Intern", Date("June", 2017), "Present"),
+    Job("Instil Software",
+        "Belfast",
+        "Software Engineering Intern",
+        Date("July", 2016),
+        Date("September", 2016),
+        ["Kotlin", "AngularJS", "DropWizard", "PostgreSQL", "Swagger"],
+        ""),
+
+    Job("Arista Networks",
+        "Dublin",
+        "Software Engineering Intern",
+        Date("June", 2017),
+        "Present",
+        ["C++", "C", "Embedded", "Command-line"],
+        ""),
 ]
 
 PROJECTS = [
@@ -46,5 +59,5 @@ PROJECTS = [
 
     Project("Passflip",
             github("passflip"),
-            "A password manager.")
+            "A lightweight SHA224-based password manager.")
 ]
