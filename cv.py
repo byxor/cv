@@ -55,7 +55,7 @@ JOBS = [
 PROJECTS = [
     Project("LIMP Programming Language",
             github("limp"),
-            "An interpreter for my functional programming language with 98% test coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants, and a small standard library. Soon to support objects and modules. Written in python3.6."),
+            "A functional programming language (interpreter) written in python3.6. 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules."),
 
     Project("Passflip",
             github("passflip"),
