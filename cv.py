@@ -41,7 +41,7 @@ JOBS = [
         Date("July", 2016),
         Date("September", 2016),
         ["Kotlin", "AngularJS", "DropWizard", "PostgreSQL", "Swagger"],
-        ""),
+        "Worked on 3 month contract as full stack developer for Time Tracking Tool. Used Kotlin to build a REST API and email service. Used AngularJS for the frontend. Worked with Gradle, Maven and NPM/Bower for package management. Increased unit test coverage by ~15% within first month."),
 
     Job("Arista Networks",
         "Dublin",
@@ -49,7 +49,7 @@ JOBS = [
         Date("June", 2017),
         "Present",
         ["C++", "C", "Embedded", "Command-line"],
-        ""),
+        "Writing & testing C++ deployed in high-performance switches around the world. Contributing to Precision Time Protocol."),
 ]
 
 PROJECTS = [
