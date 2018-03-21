@@ -64,6 +64,10 @@ PROJECTS = [
     Project("Slimput",
             github("slimput"),
             "A faster way of scanning standard input for Java."),
+
+    Project("DecayQueueJs",
+            github("DecayQueueJs"),
+            "A JavaScript Data Structure that removes old elements automatically."
 ]
 
 HACKATHONS = [
