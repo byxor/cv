@@ -61,3 +61,10 @@ PROJECTS = [
             github("passflip"),
             "A lightweight SHA224-based password manager.")
 ]
+
+HACKATHONS = [
+    Hackathon("YRS Festival of Code", 2014, ""),
+    Hackathon("YRS Festival of Code", 2015, ""),
+    Hackathon("Global Game Jam", 2015, ""),
+    Hackathon("Arista Hack-a-Switch", 2017, ""),
+]
