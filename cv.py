@@ -55,7 +55,7 @@ JOBS = [
 PROJECTS = [
     Project("LIMP Programming Language",
             github("limp"),
-            "A functional programming language (interpreter) written in python3.6. 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules."),
+            "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules. Written in Python 3.6."),
 
     Project("Passflip",
             github("passflip"),
@@ -70,9 +70,11 @@ PROJECTS = [
             "A JavaScript Data Structure that removes old elements automatically."),
 ]
 
-HACKATHONS = [
+EVENTS = [
     Hackathon("YRS Festival of Code", 2014, ""),
     Hackathon("YRS Festival of Code", 2015, ""),
-    Hackathon("Global Game Jam", 2015, ""),
+    Hackathon("Global Game Jam",      2015, ""),
+    Hackathon("AIB Data Hack",        2016, ""),
+    Hackathon("Google Hash Code",     2017, ""),
     Hackathon("Arista Hack-a-Switch", 2017, ""),
 ]
