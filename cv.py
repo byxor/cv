@@ -67,7 +67,7 @@ PROJECTS = [
 
     Project("DecayQueueJs",
             github("DecayQueueJs"),
-            "A JavaScript Data Structure that removes old elements automatically."
+            "A JavaScript Data Structure that removes old elements automatically."),
 ]
 
 HACKATHONS = [
