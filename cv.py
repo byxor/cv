@@ -32,6 +32,7 @@ EXTRA_LANGUAGES = [
     ExtraLanguage("Prolog"),
     ExtraLanguage("Clojure"),
     ExtraLanguage("UnityScript"),
+    ExtraLanguage("LIMP"),
 ]
 
 JOBS = [
@@ -41,7 +42,7 @@ JOBS = [
         Date("July", 2016),
         Date("September", 2016),
         ["Kotlin", "AngularJS", "DropWizard", "PostgreSQL", "Swagger"],
-        "Worked on 3 month contract as full stack developer for Time Tracking Tool. Used Kotlin to build a REST API and email service. Used AngularJS for the frontend. Worked with Gradle, Maven and NPM/Bower for package management. Increased unit test coverage by ~15% within first month."),
+        "Worked on 3 month contract as full stack developer for Time Tracking Tool. Used Kotlin to build a REST API and email service. Used AngularJS for the frontend. Worked with Gradle, Maven and NPM/Bower for package management. Increased unit test coverage by ~15% within first month. Received first-class training on topics including Test-Driven Development and Refactoring."),
 
     Job("Arista Networks",
         "Dublin",
