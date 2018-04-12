@@ -55,7 +55,7 @@ JOBS = [
 PROJECTS = [
     Project("LIMP Programming Language",
             github("limp"),
-            "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules. Written in Python 3.6."),
+            "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules. Written in Python 3.6. Try it out at http://byxor.xyz/try-limp."),
 
     Project("Passflip",
             github("passflip"),
@@ -64,6 +64,10 @@ PROJECTS = [
     Project("Slimput",
             github("slimput"),
             "A faster way of scanning standard input for Java."),
+    
+    Project("Kapoki",
+            github("kapoki"),
+            "A multi-language skeleton generator for new projects."),
 
     Project("DecayQueueJs",
             github("DecayQueueJs"),
@@ -71,7 +75,7 @@ PROJECTS = [
 ]
 
 EVENTS = [
-    Hackathon("YRS Festival of Code", 2014, ""),
+    Hackathon("YRS Festival of Code", 2014, "Week long. Competed in Plymouth, England as First Northern Irish team to compete. Awarded semi-finalists in 'Should Exist' category."),
     Hackathon("YRS Festival of Code", 2015, ""),
     Hackathon("Global Game Jam",      2015, ""),
     Hackathon("AIB Data Hack",        2016, ""),
