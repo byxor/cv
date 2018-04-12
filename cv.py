@@ -56,8 +56,12 @@ JOBS = [
 PROJECTS = [
     Project("LIMP Programming Language",
             github("limp"),
-            "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules. Written in Python 3.6. Try it out at http://byxor.xyz/try-limp."),
+            "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules. Written in Python 3.6."),
 
+    Project("Try LIMP - WebApp",
+            None,
+            "A full-stack application to execute LIMP code in the browser. Web client written with ES6, JQuery and Bootstrap 3. Backend is a REST API written in Python using Flask, running on DigitalOcean VPS. Try it out at http://byxor.xyz/try-limp."),
+    
     Project("Passflip",
             github("passflip"),
             "A lightweight SHA224-based password manager."),
