@@ -3,7 +3,7 @@ from collections import namedtuple
 Date = namedtuple("Date", "month year")
 Language = namedtuple("Language", "name usage")
 ExtraLanguage = namedtuple("ExtraLanguage", "name")
-Hackathon = namedtuple("Hackathon", "name year description")
+Event = namedtuple("Event", "name year description")
 Job = namedtuple("Job", "company location role start_date end_date technologies description")
 Project = namedtuple("Project", "name link description")
 
@@ -34,6 +34,37 @@ EXTRA_LANGUAGES = [
     ExtraLanguage("UnityScript"),
 ]
 
+EVENTS = [
+    Event("YRS Festival of Code", 2014, ""),
+    Event("YRS Festival of Code", 2015, ""),
+    Event("Global Game Jam",      2015, ""),
+    Event("AIB Data Hack",        2016, ""),
+    Event("Google Hash Code",     2017, ""),
+    Event("Arista Hack-a-Switch", 2017, ""),
+]
+
+PROJECTS = [
+    Project("LIMP Programming Language",
+            github("limp"),
+            "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules. Written in Python 3.6."),
+
+    Project("Passflip",
+            github("passflip"),
+            "A lightweight SHA224-based password manager."),
+
+    Project("Slimput",
+            github("slimput"),
+            "A faster way of scanning standard input for Java."),
+
+    Project("Thought",
+            github("thought"),
+            "A compiler/tool to encourage articulated, exploratory, disciplined thinking."),
+
+    Project("DecayQueueJs",
+            github("DecayQueueJs"),
+            "A JavaScript Data Structure that removes old elements automatically."),
+]
+
 JOBS = [
     Job("Instil Software",
         "Belfast",
@@ -50,31 +81,4 @@ JOBS = [
         "Present",
         ["C++", "C", "Embedded", "Command-line"],
         "Writing & testing C++ deployed in high-performance switches around the world. Contributing to Precision Time Protocol."),
-]
-
-PROJECTS = [
-    Project("LIMP Programming Language",
-            github("limp"),
-            "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules. Written in Python 3.6."),
-
-    Project("Passflip",
-            github("passflip"),
-            "A lightweight SHA224-based password manager."),
-
-    Project("Slimput",
-            github("slimput"),
-            "A faster way of scanning standard input for Java."),
-
-    Project("DecayQueueJs",
-            github("DecayQueueJs"),
-            "A JavaScript Data Structure that removes old elements automatically."),
-]
-
-EVENTS = [
-    Hackathon("YRS Festival of Code", 2014, ""),
-    Hackathon("YRS Festival of Code", 2015, ""),
-    Hackathon("Global Game Jam",      2015, ""),
-    Hackathon("AIB Data Hack",        2016, ""),
-    Hackathon("Google Hash Code",     2017, ""),
-    Hackathon("Arista Hack-a-Switch", 2017, ""),
 ]
