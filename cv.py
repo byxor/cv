@@ -21,7 +21,7 @@ PRIMARY_LANGUAGES = [
     Language("Python 3",         "Essential language for degree. Used in year-long team project and many personal projects."),
     Language("C++",              "Used to program ASICs in Arista switches and solve competitive programming problems."),
     Language("Kotlin",           "Used in production environment to write HTTP backend."),
-    Language("JavaScript (ES6)", "Used for web development with AngularJS. Familiar with ES6 features."),
+    Language("JavaScript (ES6)", "Used for web development with Angular. Familiar with ES6 features."),
     Language("C",                "Taught me about memory management, the stack, the heap, pointers."),
 ]
 
