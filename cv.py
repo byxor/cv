@@ -43,7 +43,7 @@ JOBS = [
         Date("July", 2016),
         Date("September", 2016),
         ["Kotlin", "AngularJS", "DropWizard", "PostgreSQL", "Swagger"],
-        "Full Stack Developer working on Time Tracking Tool. Built REST API & Email Service with Kotlin. Increased test coverage by ~15% in first month. Maintained AngularJS frontend. Received first-class training on Test-Driven Development and Refactoring."),
+        "Full Stack Developer for a Time Tracking Tool. Built REST API & Email Service with Kotlin. Increased test coverage by ~15% in first month. Maintained AngularJS frontend. Received first-class training on Test-Driven Development and Refactoring."),
 
     Job("Arista Networks",
         "Dublin",
