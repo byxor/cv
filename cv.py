@@ -17,7 +17,7 @@ SKILLS = [
 ]
 
 PRIMARY_LANGUAGES = [
-    Language("Java",             "Over 4 years of experience and consistent use in personal projects."),
+    Language("Java",             "First taste of OOP, used frequently in many early projects."),
     Language("Python 3",         "Essential language for degree. Used in year-long team project and many personal projects."),
     Language("C++",              "Used to program ASICs in Arista switches and solve competitive programming problems."),
     Language("Kotlin",           "Used in production environment to write HTTP backend."),
@@ -29,6 +29,7 @@ EXTRA_LANGUAGES = [
     ExtraLanguage("Go"),
     ExtraLanguage("Ruby"),
     ExtraLanguage("x86 Assembly (MASM)"),
+    ExtraLanguage("x86_64 Assembly (NASM)"),
     ExtraLanguage("Prolog"),
     ExtraLanguage("Clojure"),
     ExtraLanguage("UnityScript"),
@@ -49,8 +50,8 @@ JOBS = [
         "Software Engineering Intern",
         Date("June", 2017),
         "Present",
-        ["C++", "C", "Embedded", "Command-line"],
-        "Writing & testing C++ deployed in high-performance switches around the world. Contributing to Precision Time Protocol."),
+        ["TACC", "C++", "C", "Command-line"],
+        "Wrote & tested C++ deployed on high-performance switches around the world. Worked exclusively in command-line environments."),
 ]
 
 PROJECTS = [
