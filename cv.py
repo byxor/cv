@@ -29,7 +29,7 @@ EXTRA_LANGUAGES = [
     ExtraLanguage("Go"),
     ExtraLanguage("Ruby"),
     ExtraLanguage("x86 Assembly (MASM)"),
-    ExtraLanguage("x86_64 Assembly (NASM)"),
+    ExtraLanguage("x64 Assembly (NASM)"),
     ExtraLanguage("Prolog"),
     ExtraLanguage("Clojure"),
     ExtraLanguage("UnityScript"),
@@ -43,7 +43,7 @@ JOBS = [
         Date("July", 2016),
         Date("September", 2016),
         ["Kotlin", "AngularJS", "DropWizard", "PostgreSQL", "Swagger"],
-        "Worked on 3 month contract as full stack developer for Time Tracking Tool. Used Kotlin to build a REST API and email service. Used AngularJS for the frontend. Worked with Gradle, Maven and NPM/Bower for package management. Increased unit test coverage by ~15% within first month. Received first-class training on topics including Test-Driven Development and Refactoring."),
+        "Full Stack Developer working on Time Tracking Tool. Built REST API & Email Service with Kotlin. Increased test coverage by ~15% in first month. Maintained AngularJS frontend. Received first-class training on Test-Driven Development and Refactoring."),
 
     Job("Arista Networks",
         "Dublin",
