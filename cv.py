@@ -35,15 +35,6 @@ EXTRA_LANGUAGES = [
     ExtraLanguage("LIMP"),
 ]
 
-<<<<<<< HEAD
-EVENTS = [
-    Event("YRS Festival of Code", 2014, ""),
-    Event("YRS Festival of Code", 2015, ""),
-    Event("Global Game Jam",      2015, ""),
-    Event("AIB Data Hack",        2016, ""),
-    Event("Google Hash Code",     2017, ""),
-    Event("Arista Hack-a-Switch", 2017, ""),
-=======
 JOBS = [
     Job("Instil Software",
         "Belfast",
@@ -60,7 +51,6 @@ JOBS = [
         "Present",
         ["C++", "C", "Embedded", "Command-line"],
         "Writing & testing C++ deployed in high-performance switches around the world. Contributing to Precision Time Protocol."),
->>>>>>> 4619f56208b86a64a795d34afa03f04711d93111
 ]
 
 PROJECTS = [
@@ -97,24 +87,6 @@ PROJECTS = [
             "A JavaScript Data Structure that removes old elements automatically."),
 ]
 
-<<<<<<< HEAD
-JOBS = [
-    Job("Instil Software",
-        "Belfast",
-        "Software Engineering Intern",
-        Date("July", 2016),
-        Date("September", 2016),
-        ["Kotlin", "AngularJS", "DropWizard", "PostgreSQL", "Swagger"],
-        "Worked on 3 month contract as full stack developer for Time Tracking Tool. Used Kotlin to build a REST API and email service. Used AngularJS for the frontend. Worked with Gradle, Maven and NPM/Bower for package management. Increased unit test coverage by ~15% within first month."),
-
-    Job("Arista Networks",
-        "Dublin",
-        "Software Engineering Intern",
-        Date("June", 2017),
-        "Present",
-        ["C++", "C", "Embedded", "Command-line"],
-        "Writing & testing C++ deployed in high-performance switches around the world. Contributing to Precision Time Protocol."),
-=======
 EVENTS = [
     Hackathon("YRS Festival of Code", 2014, "Week long. Competed in Plymouth, England as First Northern Irish team to compete. Awarded semi-finalists in 'Should Exist' category."),
     Hackathon("YRS Festival of Code", 2015, ""),
@@ -122,5 +94,4 @@ EVENTS = [
     Hackathon("AIB Data Hack",        2016, ""),
     Hackathon("Google Hash Code",     2017, ""),
     Hackathon("Arista Hack-a-Switch", 2017, ""),
->>>>>>> 4619f56208b86a64a795d34afa03f04711d93111
 ]
