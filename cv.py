@@ -23,6 +23,7 @@ PRIMARY_LANGUAGES = [
     Language("Kotlin",           "Used in production environment to write HTTP backend."),
     Language("JavaScript (ES6)", "Used for web development with Angular. Familiar with ES6 features."),
     Language("C",                "Taught me about memory management, the stack, the heap, pointers."),
+    Language("Go",               "Introduced me to goroutines and channels as a concurrency model."),
 ]
 
 EXTRA_LANGUAGES = [
