@@ -1,7 +1,7 @@
 from functools import partial
 
-from content import data
-from formatting import render_latex, export_file
+from cv.content import data
+from cv.formatting import render_latex, export_file
 
 
 def build_cv(data, renderer, exporter):

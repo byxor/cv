@@ -1,5 +1,5 @@
-from structures import Date, Language, ExtraLanguage, Job, Project, Hackathon
-from helpers import github
+from cv.structures import *
+from cv.helpers import *
 
 _skills = [
     "Test Driven Development",
