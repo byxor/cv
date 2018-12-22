@@ -7,12 +7,23 @@ def render_latex(content):
         "\\documentclass{article}",
 
         "\\usepackage{hyperref}",
+        "\\usepackage{titlesec}",
+        "\\usepackage[margin=1in]{geometry}",
 
-        "\\author{Brandon Ibbotson}",
-        "\\title{My Super Cool CV}",
+        "\\titleformat{\section}",
+        "{\\huge\\bfseries}",
+        "{}",
+        "{0em}",
+        "{}[\\titlerule]",
+
+        "\\pagenumbering{gobble}",
+
+        #########################
 
         "\\begin{document}",
 
+        "\\author{Brandon Ibbotson}",
+        "\\title{My Super Cool CV}",
         "\\maketitle",
 
         "\\section{Skills}",
@@ -22,10 +33,12 @@ def render_latex(content):
 
         "\\section{Experience}",
 
-        "\\section{Outro}",
+        "\\vspace*{\\fill}",
+        "\\begin{center}",
         "This CV was rendered with \\textbf{Python} {\\&} \\textbf{{\\LaTeX}}.",
         "",
         "Source code at: \\url{www.github.com/byxor/cv}",
+        "\\end{center}",
 
         "\\end{document}",
     ])
@@ -34,4 +47,3 @@ def render_latex(content):
 def export_file(path, content):
     with open(path, "w") as f:
         f.write(content)
-

@@ -1,8 +1,16 @@
 \documentclass{article}
 \usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+\titleformat{\section}
+{\huge\bfseries}
+{}
+{0em}
+{}[\titlerule]
+\pagenumbering{gobble}
+\begin{document}
 \author{Brandon Ibbotson}
 \title{My Super Cool CV}
-\begin{document}
 \maketitle
 \section{Skills}
 \begin{itemize}
@@ -10,8 +18,10 @@
  \item Agile Development
 \end{itemize}
 \section{Experience}
-\section{Outro}
+\vspace*{\fill}
+\begin{center}
 This CV was rendered with \textbf{Python} {\&} \textbf{{\LaTeX}}.
 
 Source code at: \url{www.github.com/byxor/cv}
+\end{center}
 \end{document}
