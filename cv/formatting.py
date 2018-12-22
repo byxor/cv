@@ -23,7 +23,8 @@ def render_latex(content):
         "\\section{Experience}",
 
         "\\section{Outro}",
-        "This CV was rendered with Python \\& \\LaTeX.\\\\",
+        "This CV was rendered with \\textbf{Python} {\\&} \\textbf{{\\LaTeX}}.",
+        "",
         "Source code at: \\url{www.github.com/byxor/cv}",
 
         "\\end{document}",
