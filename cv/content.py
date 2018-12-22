@@ -33,7 +33,8 @@ _jobs = [
         Date("June", 2017),
         "Present",
         ["TACC", "C++", "C", "Command-line"],
-        "Wrote & tested C++ deployed on high-performance switches around the world. Worked exclusively in command-line environments."),
+        "Wrote & tested C++ deployed on high-performance switches around the world. "
+        "Worked exclusively in command-line environments."),
 ]
 
 _extra_languages = [

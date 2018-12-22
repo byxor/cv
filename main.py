@@ -5,7 +5,9 @@ from cv.formatting import render_latex, export_file
 
 
 def build_cv(data, renderer, exporter):
-    exporter(renderer(data))
+    rendered = renderer(data)
+    print(rendered)
+    exporter(rendered)
 
 
 if __name__ == "__main__":

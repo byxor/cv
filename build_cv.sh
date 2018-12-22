@@ -14,8 +14,6 @@ function shout {
     shouts=$((shouts + 1))
 }
 
-clear
-
 shout "Python -> LaTeX..."
 python main.py
 
