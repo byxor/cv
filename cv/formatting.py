@@ -4,9 +4,10 @@ export = lambda content: NotImplementedError()
 
 def render_latex(content):
     return "\n".join([
-        "Hello, this is my file.",
-        "I just rendered it.",
-        ""
+        "\\documentclass{article}",
+        "\\begin{document}",
+        "\\end{document}",
+        "",
     ])
 
 
