@@ -61,7 +61,7 @@ PROJECTS = [
             "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules. Written in Python 3.6."),
 
     Project("Website at byxor.xyz",
-            github("website),
+            github("website"),
             "A website built using Angular 5. Can be seen at http://www.byxor.xyz"),
     
     Project("Try LIMP - WebApp",
