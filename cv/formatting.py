@@ -5,17 +5,28 @@ export = lambda content: NotImplementedError()
 def render_latex(content):
     return "\n".join([
         "\\documentclass{article}",
+
+        "\\usepackage{hyperref}",
+
+        "\\author{Brandon Ibbotson}",
+        "\\title{My Super Cool CV}",
+
         "\\begin{document}",
 
-        "\\huge{Skills}",
+        "\\maketitle",
+
+        "\\section{Skills}",
         "\\begin{itemize}",
-        *[f"  \\item {skill}" for skill in content["skills"]],
+        *[f" \\item {skill}" for skill in content["skills"]],
         "\\end{itemize}",
 
-        "Rendered with Python \\& \\LaTeX!",
+        "\\section{Experience}",
+
+        "\\section{Outro}",
+        "This CV was rendered with Python \\& \\LaTeX.\\\\",
+        "Source code at: \\url{www.github.com/byxor/cv}",
 
         "\\end{document}",
-        "",
     ])
 
 
