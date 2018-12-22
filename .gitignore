@@ -1,4 +1,7 @@
 *.pyc
 __init__.py
 venv/
+
 *.log
+*.aux
+*.out
