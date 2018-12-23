@@ -1,16 +1,27 @@
 \documentclass{article}
 \usepackage{hyperref}
 \usepackage{titlesec}
-\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage[a4paper, left=1in, right=1in, top=15mm, bottom=8mm]{geometry}
 \titleformat{\section}
 {\huge\bfseries}
 {}
 {0em}
 {}[\titlerule]
+\newcommand{\youremail}[1]{ \href{#1}{#1} }
+\renewcommand{\maketitle}{
+  \vspace{.25em}
+  \begin{center}
+   { \huge \bfseries Brandon Ibbotson }
+
+   \youremail{ brandon.ibbotson2@mail.dcu.ie }
+
+   \url{ www.byxor.xyz }
+  \end{center}
+  \vspace{1em}
+}
 \pagenumbering{gobble}
 \begin{document}
-\author{Brandon Ibbotson}
-\title{My Super Cool CV}
 \maketitle
 \section{Skills}
 \begin{itemize}

@@ -1,6 +1,6 @@
 from functools import partial
 
-from cv.content import data
+from cv.content import Data
 from cv.formatting import render_latex, export_file
 
 
@@ -13,4 +13,4 @@ def build_cv(data, renderer, exporter):
 if __name__ == "__main__":
     renderer = render_latex
     exporter = partial(export_file, "cv.tex")
-    build_cv(data, renderer, exporter)
+    build_cv(Data, renderer, exporter)

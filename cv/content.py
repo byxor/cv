@@ -103,11 +103,16 @@ _events = [
 ]
 
 
-data = {
-    "skills": _skills,
-    "primaryLanguages": _primary_languages,
-    "extraLanguages": _extra_languages,
-    "jobs": _jobs,
-    "projects": _projects,
-    "events": _events,
-}
+import codecs
+
+class Data:
+    name = "Brandon Ibbotson"
+    email = codecs.decode("oenaqba.voobgfba2@znvy.qph.vr", "rot_13")
+    website = "www.byxor.xyz"
+
+    skills = _skills
+    primary_languages = _primary_languages
+    extra_languages = _extra_languages
+    jobs = _jobs
+    projects = _projects
+    events = _events
