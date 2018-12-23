@@ -8,4 +8,4 @@ Python -> LaTeX -> PDF
 
 * My [CV content](https://github.com/byxor/cv/blob/master/cv/content.py) is written in Python.
 * It gets [formatted](https://github.com/byxor/cv/blob/master/cv/formatting.py) into a [LaTeX document](https://github.com/byxor/cv/blob/master/cv.tex).
-* Then converted into a [PDF document](https://github.com/byxor/cv/blob/master/cv.pdf).
+* It gets converted into a [PDF document](https://github.com/byxor/cv/blob/master/cv.pdf).
