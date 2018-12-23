@@ -37,11 +37,9 @@ def render_latex(content):
         "  \\begin{center}",
         f"   {{ \\huge \\bfseries {content.name} }}\\\\",
         "    \\vspace{.5em}",
-
         f"   \\youremail{{ {content.email} }}\\\\",
         f"   \\url{{{content.website}}}\\\\",
         "    \\vspace{.7em}",
-
         "  \\end{center}",
         "}",
 
@@ -71,7 +69,14 @@ def render_latex(content):
         "\\end{itemize}",
 
         "\\section{Languages}",
-        "\\lipsum[1]",
+
+        "\\subsection{Primary Languages}",
+        "\\begin{itemize}",
+        *[f"\\item {language.name}: {language.usage}" for language in content.primary_languages],
+        "\\end{itemize}",
+
+        "\\subsection{Extra Languages}",
+        ', '.join([language.name for language in content.extra_languages]),
 
         "\\section{Experience}",
         "\\lipsum[1]",
@@ -80,11 +85,11 @@ def render_latex(content):
         "\\lipsum[1]",
 
         "\\yourfooter{",
-        "  \\begin{tabularx}{\\textwidth}{*3{>{\\Centering}X}}",
-        f"   \\yoursocial{{\\faGithub}}{{{content.github}}} &",
-        f"   \\yoursocial{{\\faStackOverflow}}{{{content.stack_overflow}}} &",
-        f"   \\yoursocial{{\\faLaptop}}{{{content.website}}}\\\\",
-        "  \\end{tabularx}",
+        _create_latex_strip([
+            f"\\yoursocial{{\\faGithub}}{{{content.github}}}",
+            f"\\yoursocial{{\\faStackOverflow}}{{{content.stack_overflow}}}",
+            f"\\yoursocial{{\\faLaptop}}{{{content.website}}}",
+        ]),
         "  ",
         "  \\vspace{1em}",
         "  ",
@@ -94,6 +99,17 @@ def render_latex(content):
 
         "\\end{document}",
     ])
+
+
+def _create_latex_strip(contents):
+    innards = " & ".join(contents) + "\\\\"
+    return "\n".join([
+        f"\\begin{{tabularx}}{{\\textwidth}}{{*{len(contents)}{{>{{\\Centering}}X}}}}",
+        innards,
+        "\\end{tabularx}"
+    ])
+
+
 
 
 def export_file(path, content):
