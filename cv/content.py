@@ -3,7 +3,7 @@ from cv.helpers import *
 
 _skills = [
     "Test Driven Development",
-    "Agile Development"
+    "Agile Development",
 ]
 
 _primary_languages = [
@@ -103,15 +103,12 @@ _events = [
 ]
 
 
-import codecs
-
 class Data:
     name = "Brandon Ibbotson"
-    email = codecs.decode("oenaqba.voobgfba2@znvy.qph.vr", "rot_13")
+    email = decode("oenaqba.voobgfba2@znvy.qph.vr")
     website = "www.byxor.xyz"
     github = "www.github.com/byxor"
     stack_overflow = "www.stackoverflow.com/users/5601284"
-
     skills = _skills
     primary_languages = _primary_languages
     extra_languages = _extra_languages
