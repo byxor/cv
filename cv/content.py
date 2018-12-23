@@ -2,8 +2,9 @@ from cv.structures import *
 from cv.helpers import *
 
 _skills = [
-    "Test Driven Development",
+    "Test-Driven Development",
     "Agile Development",
+    "Git",
 ]
 
 _primary_languages = [
@@ -31,7 +32,7 @@ _jobs = [
         "Dublin",
         "Software Engineering Intern",
         Date("June", 2017),
-        "Present",
+        Date("June", 2018),
         ["TACC", "C++", "C", "Command-line"],
         "Wrote & tested C++ deployed on high-performance switches around the world. "
         "Worked exclusively in command-line environments."),

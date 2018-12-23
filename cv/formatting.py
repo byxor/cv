@@ -1,9 +1,12 @@
+import re
+
+
 render = lambda content: NotImplementedError()
 export = lambda content: NotImplementedError()
 
 
 def render_latex(content):
-    return "\n".join([
+    return _lines(
         "\\documentclass{article}",
 
         # Packages
@@ -63,12 +66,13 @@ def render_latex(content):
 
         "\\maketitle",
 
-        "\\section{Skills}",
-        "\\begin{itemize}",
-        *[f"\\item {skill}" for skill in content.skills],
-        "\\end{itemize}",
+        "\\section{Overview}",
 
-        "\\section{Languages}",
+        "\\subsection{Skills}",
+
+        "\\begin{itemize}",
+        *[f"\\item \\textbf{{{skill}}}" for skill in content.skills],
+        "\\end{itemize}",
 
         "\\subsection{Primary Languages}",
         "\\begin{itemize}",
@@ -79,13 +83,17 @@ def render_latex(content):
         ', '.join([language.name for language in content.extra_languages]),
 
         "\\section{Experience}",
-        "\\lipsum[1]",
+        _render_latex_jobs(content.jobs),
 
         "\\section{Projects}",
         "\\lipsum[1]",
+        "",
+        "\\begin{center}",
+        f" See more projects at \\url{{{content.website}/projects}}",
+        "\\end{center}",
 
         "\\yourfooter{",
-        _create_latex_strip([
+        _render_latex_strip([
             f"\\yoursocial{{\\faGithub}}{{{content.github}}}",
             f"\\yoursocial{{\\faStackOverflow}}{{{content.stack_overflow}}}",
             f"\\yoursocial{{\\faLaptop}}{{{content.website}}}",
@@ -98,18 +106,54 @@ def render_latex(content):
         "}",
 
         "\\end{document}",
-    ])
+    )
 
 
-def _create_latex_strip(contents):
+def _render_latex_strip(contents):
     innards = " & ".join(contents) + "\\\\"
-    return "\n".join([
+    return _lines(
         f"\\begin{{tabularx}}{{\\textwidth}}{{*{len(contents)}{{>{{\\Centering}}X}}}}",
         innards,
-        "\\end{tabularx}"
-    ])
+        "\\end{tabularx}",
+    )
 
 
+def _render_latex_jobs(jobs):
+    return "\\\\".join([_render_latex_job(job) for job in jobs])
+
+
+def _render_latex_job(job):
+    return _lines(
+        f"\\subsection{{{job.company} - {job.location} - {job.role}}}",
+        f"{_escape_latex(job.description)}"
+    )
+
+
+def _escape_latex(text):
+    """
+        :param text: a plain text message
+        :return: the message escaped to appear correctly in LaTeX
+    """
+    conv = {
+        '&': r'\&',
+        '%': r'\%',
+        '$': r'\$',
+        '#': r'\#',
+        '_': r'\_',
+        '{': r'\{',
+        '}': r'\}',
+        '~': r'\textasciitilde{}',
+        '^': r'\^{}',
+        '\\': r'\textbackslash{}',
+        '<': r'\textless{}',
+        '>': r'\textgreater{}',
+    }
+    regex = re.compile('|'.join(re.escape(key) for key in sorted(conv.keys(), key = lambda item: - len(item))))
+    return regex.sub(lambda match: conv[match.group()], text)
+
+
+def _lines(*lines):
+    return "\n".join(lines)
 
 
 def export_file(path, content):
