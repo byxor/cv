@@ -1,18 +1,13 @@
 \documentclass{article}
 \usepackage[a4paper, left=1in, right=1in, top=15mm, bottom=6mm]{geometry}
+\usepackage{fontawesome}
+\usepackage{booktabs}
 \usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{tabularx}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage{fontawesome}
-\usepackage{titling}
 \usepackage{xcolor}
-\usepackage{tabularx, ragged2e}
-\usepackage{booktabs}
-\titleformat{\section}
-{\huge\bfseries}
-{}
-{0em}
-{}[\titlerule]
 \newcommand{\light}[1]{\textcolor{gray}{#1}}
 \newcommand{\youremail}[1]{\href{mailto:#1}{#1}}
 \newcommand{\yoursocial}[2]{{\Large #1} \light{\url{#2}}}\newcommand{\yourfooter}[1]{
@@ -30,6 +25,11 @@
     \vspace{.7em}
   \end{center}
 }
+\titleformat{\section}
+{\huge\bfseries}
+{}
+{0em}
+{}[\titlerule]
 \pagenumbering{gobble}
 \begin{document}
 \maketitle
@@ -45,7 +45,7 @@
   \begin{tabularx}{\textwidth}{*3{>{\Centering}X}}
    \yoursocial{\faGithub}{www.github.com/byxor} &
    \yoursocial{\faStackOverflow}{www.stackoverflow.com/users/5601284} &
-   \yoursocial{\faKeyboardO}{www.byxor.xyz}\\
+   \yoursocial{\faLaptop}{www.byxor.xyz}\\
   \end{tabularx}
   
   \vspace{1em}

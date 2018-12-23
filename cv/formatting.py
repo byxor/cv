@@ -6,21 +6,19 @@ def render_latex(content):
     return "\n".join([
         "\\documentclass{article}",
 
+        # Packages
+
         "\\usepackage[a4paper, left=1in, right=1in, top=15mm, bottom=6mm]{geometry}",
+        "\\usepackage{fontawesome}",
+        "\\usepackage{booktabs}",
         "\\usepackage{hyperref}",
+        "\\usepackage{ragged2e}",
+        "\\usepackage{tabularx}",
         "\\usepackage{titlesec}",
         "\\usepackage{titling}",
-        "\\usepackage{fontawesome}",
-        "\\usepackage{titling}",
         "\\usepackage{xcolor}",
-        "\\usepackage{tabularx, ragged2e}",
-        "\\usepackage{booktabs}",
 
-        "\\titleformat{\section}",
-        "{\\huge\\bfseries}",
-        "{}",
-        "{0em}",
-        "{}[\\titlerule]",
+        # Custom Commands
 
         "\\newcommand{\\light}[1]{\\textcolor{gray}{#1}}",
         "\\newcommand{\\youremail}[1]{\\href{mailto:#1}{#1}}",
@@ -45,9 +43,21 @@ def render_latex(content):
         "  \\end{center}",
         "}",
 
+        # Formatting
+
+        "\\titleformat{\section}",
+        "{\\huge\\bfseries}",
+        "{}",
+        "{0em}",
+        "{}[\\titlerule]",
+
+        # "\\titlespacing{\\",
+
+        # Misc Settings
+
         "\\pagenumbering{gobble}",
 
-        #########################
+        # Document
 
         "\\begin{document}",
 
@@ -64,12 +74,11 @@ def render_latex(content):
 
         "\\section{Projects}",
 
-
         "\\yourfooter{",
         "  \\begin{tabularx}{\\textwidth}{*3{>{\\Centering}X}}",
         f"   \\yoursocial{{\\faGithub}}{{{content.github}}} &",
         f"   \\yoursocial{{\\faStackOverflow}}{{{content.stack_overflow}}} &",
-        f"   \\yoursocial{{\\faKeyboardO}}{{{content.website}}}\\\\",
+        f"   \\yoursocial{{\\faLaptop}}{{{content.website}}}\\\\",
         "  \\end{tabularx}",
         "  ",
         "  \\vspace{1em}",
