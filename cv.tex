@@ -1,38 +1,56 @@
 \documentclass{article}
+\usepackage[a4paper, left=1in, right=1in, top=15mm, bottom=6mm]{geometry}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[a4paper, left=1in, right=1in, top=15mm, bottom=8mm]{geometry}
+\usepackage{fontawesome}
+\usepackage{titling}
+\usepackage{xcolor}
+\usepackage{tabularx, ragged2e}
+\usepackage{booktabs}
 \titleformat{\section}
 {\huge\bfseries}
 {}
 {0em}
 {}[\titlerule]
-\newcommand{\youremail}[1]{ \href{#1}{#1} }
-\renewcommand{\maketitle}{
-  \vspace{.25em}
+\newcommand{\light}[1]{\textcolor{gray}{#1}}
+\newcommand{\youremail}[1]{\href{mailto:#1}{#1}}
+\newcommand{\yoursocial}[2]{{\Large #1} \light{\url{#2}}}\newcommand{\yourfooter}[1]{
+  \vspace*{\fill}
   \begin{center}
-   { \huge \bfseries Brandon Ibbotson }
-
-   \youremail{ brandon.ibbotson2@mail.dcu.ie }
-
-   \url{ www.byxor.xyz }
+    #1
   \end{center}
-  \vspace{1em}
+}
+\renewcommand{\maketitle}{
+  \begin{center}
+   { \huge \bfseries Brandon Ibbotson }\\
+    \vspace{.5em}
+   \youremail{ brandon.ibbotson2@mail.dcu.ie }\\
+   \url{www.byxor.xyz}\\
+    \vspace{.7em}
+  \end{center}
 }
 \pagenumbering{gobble}
 \begin{document}
 \maketitle
 \section{Skills}
 \begin{itemize}
- \item Test Driven Development
- \item Agile Development
+\item Test Driven Development
+\item Agile Development
 \end{itemize}
+\section{Languages}
 \section{Experience}
-\vspace*{\fill}
-\begin{center}
-This CV was rendered with \textbf{Python} {\&} \textbf{{\LaTeX}}.
-
-Source code at: \url{www.github.com/byxor/cv}
-\end{center}
+\section{Projects}
+\yourfooter{
+  \begin{tabularx}{\textwidth}{*3{>{\Centering}X}}
+   \yoursocial{\faGithub}{www.github.com/byxor} &
+   \yoursocial{\faStackOverflow}{www.stackoverflow.com/users/5601284} &
+   \yoursocial{\faKeyboardO}{www.byxor.xyz}\\
+  \end{tabularx}
+  
+  \vspace{1em}
+  
+  This CV was rendered with \textbf{Python} {\&} \textbf{{\LaTeX}}.\\
+  Source code: \url{www.github.com/byxor/cv}
+}
 \end{document}

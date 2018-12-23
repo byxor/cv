@@ -109,6 +109,8 @@ class Data:
     name = "Brandon Ibbotson"
     email = codecs.decode("oenaqba.voobgfba2@znvy.qph.vr", "rot_13")
     website = "www.byxor.xyz"
+    github = "www.github.com/byxor"
+    stack_overflow = "www.stackoverflow.com/users/5601284"
 
     skills = _skills
     primary_languages = _primary_languages

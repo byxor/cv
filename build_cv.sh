@@ -18,7 +18,8 @@ shout "Python -> LaTeX..."
 python main.py
 
 shout "LaTeX -> PDF..."
-pdflatex cv.tex < /dev/null
+# pdflatex cv.tex < /dev/null
+xelatex cv < /dev/null
 
 # shout "Displaying PDF..."
 # firefox cv.pdf
