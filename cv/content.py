@@ -8,10 +8,10 @@ _skills = [
 
 _primary_languages = [
     Language("Go", "Introduced me to goroutines and channels as a concurrency model."),
-    Language("Python 3", "Essential language for degree. Used in year-long team project and many personal projects."),
+    Language("Python", "Essential language for degree. Used in year-long team project and many personal projects."),
     Language("JavaScript (ES6/ES7)", "Used for web development with Angular. Familiar with ES6 features."),
-    Language("Java", "First taste of OOP, used frequently in many early projects."),
     Language("Kotlin", "Used in production environments to write HTTP backends."),
+    Language("Java", "First taste of OOP, used frequently in many early projects."),
     Language("C", "Taught me about memory management, the stack, the heap, pointers."),
     Language("C++", "Used to program ASICs in Arista switches and solve competitive programming problems."),
 ]
