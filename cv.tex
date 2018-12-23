@@ -2,11 +2,13 @@
 \usepackage[a4paper, left=1in, right=1in, top=15mm, bottom=6mm]{geometry}
 \usepackage{fontawesome}
 \usepackage{booktabs}
+\usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{ragged2e}
 \usepackage{tabularx}
 \usepackage{titlesec}
 \usepackage{titling}
+\usepackage{lipsum}
 \usepackage{xcolor}
 \newcommand{\light}[1]{\textcolor{gray}{#1}}
 \newcommand{\youremail}[1]{\href{mailto:#1}{#1}}
@@ -30,6 +32,7 @@
 {}
 {0em}
 {}[\titlerule]
+\setlist{nosep}
 \pagenumbering{gobble}
 \begin{document}
 \maketitle
@@ -39,8 +42,11 @@
 \item Agile Development
 \end{itemize}
 \section{Languages}
+\lipsum[1]
 \section{Experience}
+\lipsum[1]
 \section{Projects}
+\lipsum[1]
 \yourfooter{
   \begin{tabularx}{\textwidth}{*3{>{\Centering}X}}
    \yoursocial{\faGithub}{www.github.com/byxor} &

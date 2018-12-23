@@ -11,11 +11,13 @@ def render_latex(content):
         "\\usepackage[a4paper, left=1in, right=1in, top=15mm, bottom=6mm]{geometry}",
         "\\usepackage{fontawesome}",
         "\\usepackage{booktabs}",
+        "\\usepackage{enumitem}",
         "\\usepackage{hyperref}",
         "\\usepackage{ragged2e}",
         "\\usepackage{tabularx}",
         "\\usepackage{titlesec}",
         "\\usepackage{titling}",
+        "\\usepackage{lipsum}",
         "\\usepackage{xcolor}",
 
         # Custom Commands
@@ -45,13 +47,13 @@ def render_latex(content):
 
         # Formatting
 
-        "\\titleformat{\section}",
+        "\\titleformat{\\section}",
         "{\\huge\\bfseries}",
         "{}",
         "{0em}",
         "{}[\\titlerule]",
 
-        # "\\titlespacing{\\",
+        "\\setlist{nosep}",
 
         # Misc Settings
 
@@ -69,10 +71,13 @@ def render_latex(content):
         "\\end{itemize}",
 
         "\\section{Languages}",
+        "\\lipsum[1]",
 
         "\\section{Experience}",
+        "\\lipsum[1]",
 
         "\\section{Projects}",
+        "\\lipsum[1]",
 
         "\\yourfooter{",
         "  \\begin{tabularx}{\\textwidth}{*3{>{\\Centering}X}}",
