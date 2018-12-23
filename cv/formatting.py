@@ -72,7 +72,7 @@ def render_latex(content):
 
         "\\subsection{Primary Languages}",
         "\\begin{itemize}",
-        *[f"\\item {language.name}: {language.usage}" for language in content.primary_languages],
+        *[f"\\item \\textbf{{{language.name}}}: {language.usage}" for language in content.primary_languages],
         "\\end{itemize}",
 
         "\\subsection{Extra Languages}",

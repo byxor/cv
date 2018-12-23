@@ -38,8 +38,8 @@ _jobs = [
 ]
 
 _extra_languages = [
-    ExtraLanguage("Go"),
     ExtraLanguage("Ruby"),
+    ExtraLanguage("Haskell"),
     ExtraLanguage("x86 Assembly (MASM)"),
     ExtraLanguage("x64 Assembly (NASM)"),
     ExtraLanguage("Prolog"),
