@@ -34,12 +34,15 @@ def render_latex(content):
         "  \\end{center}",
         "}",
 
+        "\\newcommand{\\yourmiddle}[1]{\\noindent\\parbox[c]{\\hsize}{#1}}",
+
         ###
 
         "\\titleformat{\\section}{\\huge\\bfseries}{}{0em}{}[\\titlerule]",
-        # "\\titleformat{\\subsection}[runin]{\\bfseries}{}{5em}{}[:]",
-        "\\titleformat{\\subsection}{\\bfseries}{}{5em}{}[:]",
-        "\\titlespacing{\\subsection}{0pt}{1ex}{5ex}",
+        "\\titlespacing{\\section}{0em}{1em}{1em}",
+
+        # "\\titleformat{\\subsection}{\\bfseries}{}{1em}{}[]",
+        "\\titlespacing{\\subsection}{0pt}{0.5em}{-0.2em}",
 
         "\\newcolumntype{b}{X}",
         "\\newcolumntype{s}{>{\hsize=.5\hsize}X}",
@@ -56,21 +59,14 @@ def render_latex(content):
 
         "\\section{Overview}",
 
-        "\\begin{tabularx}{\\textwidth}{sb}",
-
-        "\\textbf{Skills} &",
+        "\\subsection{Skills}",
         _escape_latex(_commas(*content.skills)),
-        "\\\\",
 
-        "\\textbf{Primary Languages} &",
+        "\\subsection{Primary Languages}",
         _escape_latex(_commas(*[language.name for language in content.primary_languages])),
-        "\\\\",
 
-        "\\textbf{Extra Languages} &",
+        "\\subsection{Extra Languages}",
         _escape_latex(_commas(*[language.name for language in content.extra_languages])),
-        "\\\\",
-
-        "\\end{tabularx}",
 
         "\\section{Experience}",
         _render_latex_jobs(content.jobs),
@@ -105,9 +101,11 @@ def _latex_packages():
         "{booktabs}",
         "{enumitem}",
         "{hyperref}",
+        "{multicol}",
         "{ragged2e}",
         "{tabularx}",
         "{titlesec}",
+        "{parskip}",
         "{titling}",
         "{lipsum}",
         "{xcolor}",
@@ -141,16 +139,22 @@ def _render_latex_jobs(jobs):
 def _render_latex_job(job):
     return _lines(
         f"\\subsection{{{job.company} ({job.location}) - {job.role}}}",
-        f"{_escape_latex(job.description)}\\\\",
-        _render_thin_latex_strip(job.technologies),
+        f"{_render_latex_date(job.start_date)} - {_render_latex_date(job.end_date)}",
+        "",
+        f"{_escape_latex(job.description)}",
+        "",
+        f"\\textbf{{Technologies: }}{_commas(*job.technologies)}",
+        "\\vspace{0.5em}",
     )
 
 
+def _render_latex_date(date):
+    if type(date) == str:
+        return date
+    return f"\\textbf{{{date.month} {date.year}}}"
+
+
 def _escape_latex(text):
-    """
-        :param text: a plain text message
-        :return: the message escaped to appear correctly in LaTeX
-    """
     conv = {
         '&': r'\&',
         '%': r'\%',

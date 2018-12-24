@@ -7,7 +7,7 @@ echo "Leave this running in a terminal somewhere."
 echo "----------------------------------------------"
 
 echo "Serving directory..."
-live-server &
+live-server --watch=cv.pdf &
 
 echo "Enabling auto-recompile..."
 find . -name '*.py' ! -path '*/venv/*' | entr -p "./build_cv.sh"

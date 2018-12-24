@@ -4,9 +4,11 @@
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{multicol}
 \usepackage{ragged2e}
 \usepackage{tabularx}
 \usepackage{titlesec}
+\usepackage{parskip}
 \usepackage{titling}
 \usepackage{lipsum}
 \usepackage{xcolor}
@@ -28,9 +30,10 @@
     #1
   \end{center}
 }
+\newcommand{\yourmiddle}[1]{\noindent\parbox[c]{\hsize}{#1}}
 \titleformat{\section}{\huge\bfseries}{}{0em}{}[\titlerule]
-\titleformat{\subsection}{\bfseries}{}{5em}{}[:]
-\titlespacing{\subsection}{0pt}{1ex}{5ex}
+\titlespacing{\section}{0em}{1em}{1em}
+\titlespacing{\subsection}{0pt}{0.5em}{-0.2em}
 \newcolumntype{b}{X}
 \newcolumntype{s}{>{\hsize=.5\hsize}X}
 \linespread{0.9}
@@ -39,31 +42,26 @@
 \begin{document}
 \yourtitle{Brandon Ibbotson}{brandon.ibbotson2@mail.dcu.ie}{www.byxor.xyz}
 \section{Overview}
-\begin{tabularx}{\textwidth}{sb}
-\textbf{Skills} &
+\subsection{Skills}
 Test-Driven Development, Agile Development, Git
-\\
-\textbf{Primary Languages} &
-Go, Python, JavaScript (ES6/ES7), Kotlin, Java, C, C++
-\\
-\textbf{Extra Languages} &
+\subsection{Primary Languages}
+Go, Python, Kotlin, JavaScript (ES6/ES7), Java, C, C++
+\subsection{Extra Languages}
 Haskell, x86, x64, LIMP, UnityScript, Ruby, Clojure, Prolog
-\\
-\end{tabularx}
 \section{Experience}
 \subsection{Instil Software (Belfast) - Software Engineering Intern}
-Full Stack Developer for a Time Tracking Tool. Built REST API \& Email Service with Kotlin. Increased test coverage by \textasciitilde{}15\% in first month. Maintained AngularJS frontend. Received first-class training on Test-Driven Development and Refactoring.\\
-\begin{center}
- \begin{tabular}{ccccc}
-Kotlin & AngularJS & DropWizard & PostgreSQL & Swagger\\
-  \end{tabular}
-\end{center}\subsection{Arista Networks (Dublin) - Software Engineering Intern}
-Wrote \& tested C++ deployed on high-performance switches around the world. Worked exclusively in command-line environments.\\
-\begin{center}
- \begin{tabular}{cccc}
-TACC & C++ & C & Command-line\\
-  \end{tabular}
-\end{center}
+\textbf{July 2016} - \textbf{September 2016}
+
+Full Stack Developer for a Time Tracking Tool. Built REST API \& Email Service with Kotlin. Increased test coverage by \textasciitilde{}15\% in first month. Maintained AngularJS frontend. Received first-class training on Test-Driven Development and Refactoring.
+
+\textbf{Technologies: }Kotlin, AngularJS, DropWizard, PostgreSQL, Swagger
+\vspace{0.5em}\subsection{Arista Networks (Dublin) - Software Engineering Intern}
+\textbf{June 2017} - \textbf{June 2018}
+
+Wrote \& tested C++ deployed on high-performance switches around the world. Worked exclusively in command-line environments using SSH, Tmux \& Emacs. 
+
+\textbf{Technologies: }TACC, C++, C, SSH
+\vspace{0.5em}
 \section{Projects}
 \begin{center}
  See more projects at \url{www.byxor.xyz/projects}

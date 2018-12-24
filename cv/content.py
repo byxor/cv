@@ -10,11 +10,23 @@ _skills = [
 _primary_languages = [
     Language("Go", "Introduced me to goroutines and channels as a concurrency model."),
     Language("Python", "Essential language for degree. Used in year-long team project and many personal projects."),
-    Language("JavaScript (ES6/ES7)", "Used for web development with Angular. Familiar with ES6 features."),
     Language("Kotlin", "Used in production environments to write HTTP backends."),
+    Language("JavaScript (ES6/ES7)", "Used for web development with Angular. Familiar with ES6 features."),
     Language("Java", "First taste of OOP, used frequently in many early projects."),
     Language("C", "Taught me about memory management, the stack, the heap, pointers."),
     Language("C++", "Used to program ASICs in Arista switches and solve competitive programming problems."),
+]
+
+_extra_languages = [
+    ExtraLanguage("Haskell"),
+    ExtraLanguage("x86"),
+    ExtraLanguage("x64"),
+    ExtraLanguage("LIMP"),
+    ExtraLanguage("UnityScript"),
+    ExtraLanguage("Ruby"),
+    ExtraLanguage("Clojure"),
+    ExtraLanguage("Prolog"),
+
 ]
 
 _jobs = [
@@ -33,21 +45,9 @@ _jobs = [
         "Software Engineering Intern",
         Date("June", 2017),
         Date("June", 2018),
-        ["TACC", "C++", "C", "Command-line"],
+        ["TACC", "C++", "C", "SSH"],
         "Wrote & tested C++ deployed on high-performance switches around the world. "
-        "Worked exclusively in command-line environments."),
-]
-
-_extra_languages = [
-    ExtraLanguage("Haskell"),
-    ExtraLanguage("x86"),
-    ExtraLanguage("x64"),
-    ExtraLanguage("LIMP"),
-    ExtraLanguage("UnityScript"),
-    ExtraLanguage("Ruby"),
-    ExtraLanguage("Clojure"),
-    ExtraLanguage("Prolog"),
-
+        "Worked exclusively in command-line environments using SSH, Tmux & Emacs. "),
 ]
 
 _projects = [
