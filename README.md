@@ -2,7 +2,7 @@
 
 Here are some tools I use to automatically generate and maintain my CV.
 
-## Steps Involved
+## Toolchain Summary
 
 Python -> LaTeX -> PDF
 
