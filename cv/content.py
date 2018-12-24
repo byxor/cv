@@ -39,14 +39,15 @@ _jobs = [
 ]
 
 _extra_languages = [
-    ExtraLanguage("Ruby"),
     ExtraLanguage("Haskell"),
-    ExtraLanguage("x86 Assembly (MASM)"),
-    ExtraLanguage("x64 Assembly (NASM)"),
-    ExtraLanguage("Prolog"),
-    ExtraLanguage("Clojure"),
-    ExtraLanguage("UnityScript"),
+    ExtraLanguage("x86"),
+    ExtraLanguage("x64"),
     ExtraLanguage("LIMP"),
+    ExtraLanguage("UnityScript"),
+    ExtraLanguage("Ruby"),
+    ExtraLanguage("Clojure"),
+    ExtraLanguage("Prolog"),
+
 ]
 
 _projects = [

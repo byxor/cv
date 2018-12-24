@@ -10,58 +10,60 @@
 \usepackage{titling}
 \usepackage{lipsum}
 \usepackage{xcolor}
-\newcommand{\light}[1]{\textcolor{gray}{#1}}
+\newcommand{\yourlight}[1]{\textcolor{gray}{#1}}
 \newcommand{\youremail}[1]{\href{mailto:#1}{#1}}
-\newcommand{\yoursocial}[2]{{\Large #1} \light{\url{#2}}}\newcommand{\yourfooter}[1]{
+\newcommand{\yoursocial}[2]{{\Large #1}\yourlight{\url{#2}}}\newcommand{\yourjustify}[1]{\makebox[	extwidth][s]{#1}}
+\newcommand{\yourtitle}[3]{
+  \begin{center}
+    {\huge\bfseries #1}\\
+    \vspace{.5em}
+    \youremail{#2}\\
+    \url{#3}\\
+    \vspace{.7em}
+  \end{center}
+}
+\newcommand{\yourfooter}[1]{
   \vspace*{\fill}
   \begin{center}
     #1
   \end{center}
 }
-\renewcommand{\maketitle}{
-  \begin{center}
-   { \huge \bfseries Brandon Ibbotson }\\
-    \vspace{.5em}
-   \youremail{ brandon.ibbotson2@mail.dcu.ie }\\
-   \url{www.byxor.xyz}\\
-    \vspace{.7em}
-  \end{center}
-}
-\titleformat{\section}
-{\huge\bfseries}
-{}
-{0em}
-{}[\titlerule]
+\titleformat{\section}{\huge\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\subsection}{0pt}{1ex}{5ex}
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.5\hsize}X}
+\linespread{0.9}
 \setlist{nosep}
 \pagenumbering{gobble}
 \begin{document}
-\maketitle
+\yourtitle{Brandon Ibbotson}{brandon.ibbotson2@mail.dcu.ie}{www.byxor.xyz}
 \section{Overview}
-\subsection{Skills}
-\begin{itemize}
-\item \textbf{Test-Driven Development}
-\item \textbf{Agile Development}
-\item \textbf{Git}
-\end{itemize}
-\subsection{Primary Languages}
-\begin{itemize}
-\item \textbf{Go}: Introduced me to goroutines and channels as a concurrency model.
-\item \textbf{Python}: Essential language for degree. Used in year-long team project and many personal projects.
-\item \textbf{JavaScript (ES6/ES7)}: Used for web development with Angular. Familiar with ES6 features.
-\item \textbf{Kotlin}: Used in production environments to write HTTP backends.
-\item \textbf{Java}: First taste of OOP, used frequently in many early projects.
-\item \textbf{C}: Taught me about memory management, the stack, the heap, pointers.
-\item \textbf{C++}: Used to program ASICs in Arista switches and solve competitive programming problems.
-\end{itemize}
-\subsection{Extra Languages}
-Ruby, Haskell, x86 Assembly (MASM), x64 Assembly (NASM), Prolog, Clojure, UnityScript, LIMP
+\begin{tabularx}{\textwidth}{sb}
+\textbf{Skills} &
+Test-Driven Development, Agile Development, Git
+\\
+\textbf{Primary Languages} &
+Go, Python, JavaScript (ES6/ES7), Kotlin, Java, C, C++
+\\
+\textbf{Extra Languages} &
+Haskell, x86, x64, LIMP, UnityScript, Ruby, Clojure, Prolog
+\\
+\end{tabularx}
 \section{Experience}
-\subsection{Instil Software - Belfast - Software Engineering Intern}
-Full Stack Developer for a Time Tracking Tool. Built REST API \& Email Service with Kotlin. Increased test coverage by \textasciitilde{}15\% in first month. Maintained AngularJS frontend. Received first-class training on Test-Driven Development and Refactoring.\\\subsection{Arista Networks - Dublin - Software Engineering Intern}
-Wrote \& tested C++ deployed on high-performance switches around the world. Worked exclusively in command-line environments.
+\subsection{Instil Software (Belfast) - Software Engineering Intern}
+Full Stack Developer for a Time Tracking Tool. Built REST API \& Email Service with Kotlin. Increased test coverage by \textasciitilde{}15\% in first month. Maintained AngularJS frontend. Received first-class training on Test-Driven Development and Refactoring.\\
+\begin{center}
+ \begin{tabular}{ccccc}
+Kotlin & AngularJS & DropWizard & PostgreSQL & Swagger\\
+  \end{tabular}
+\end{center}\subsection{Arista Networks (Dublin) - Software Engineering Intern}
+Wrote \& tested C++ deployed on high-performance switches around the world. Worked exclusively in command-line environments.\\
+\begin{center}
+ \begin{tabular}{cccc}
+TACC & C++ & C & Command-line\\
+  \end{tabular}
+\end{center}
 \section{Projects}
-\lipsum[1]
-
 \begin{center}
  See more projects at \url{www.byxor.xyz/projects}
 \end{center}
