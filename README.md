@@ -25,7 +25,7 @@ source venv/bin/activate
 ./build_cv.sh
 ```
 
-### Automatic Rebuilding
+### Rebuild Automatically
 
 ```bash
 ./auto_build.sh
