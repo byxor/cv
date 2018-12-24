@@ -38,11 +38,11 @@ def render_latex(content):
 
         ###
 
-        "\\titleformat{\\section}{\\huge\\bfseries}{}{0em}{}[\\titlerule]",
+        "\\titleformat{\\section}{\\LARGE\\bfseries}{}{0em}{}[\\titlerule]",
         "\\titlespacing{\\section}{0em}{1em}{1em}",
 
         # "\\titleformat{\\subsection}{\\bfseries}{}{1em}{}[]",
-        "\\titlespacing{\\subsection}{0pt}{0.5em}{-0.2em}",
+        "\\titlespacing{\\subsection}{0em}{0.5em}{-0.2em}",
 
         "\\newcolumntype{b}{X}",
         "\\newcolumntype{s}{>{\hsize=.5\hsize}X}",
@@ -61,14 +61,13 @@ def render_latex(content):
 
         "\\section{Overview}",
 
-        "\\subsection{Skills}",
-        _escape_latex(_commas(*content.skills)),
-
-        "\\subsection{Primary Languages}",
-        _escape_latex(_commas(*[language.name for language in content.primary_languages])),
-
-        "\\subsection{Extra Languages}",
-        _escape_latex(_commas(*[language.name for language in content.extra_languages])),
+        "\\begin{tabularx}{\\textwidth}{ll}",
+        "\\vspace{1em}",
+        _render_latex_row("\\textbf{Skills}", _commas(*content.skills)),
+        "\\vspace{1em}",
+        _render_latex_row("\\textbf{Primary Languages}", _commas(*[language.name for language in content.primary_languages])),
+        _render_latex_row("\\textbf{Extra Languages}", _commas(*[language.name for language in content.extra_languages])),
+        "\\end{tabularx}",
 
         "\\section{Experience}",
         _render_latex_jobs(content.jobs),
@@ -93,7 +92,7 @@ def render_latex(content):
             f"\\yoursocial{{\\faLaptop}}{{{content.website}}}",
         ]),
         "",
-        "  \\vspace{1em}",
+        # "  \\vspace{0.5em}",
         "  This CV was rendered with \\textbf{Python} {\\&} \\textbf{{\\LaTeX}} (\\url{www.github.com/byxor/cv}).\\\\",
         "}",
 
@@ -105,7 +104,9 @@ def _latex_packages():
     return [f"\\usepackage{p}" for p in [
         "[a4paper, left=1in, right=1in, top=15mm, bottom=6mm]{geometry}",
         "{fontawesome}",
+        "{changepage}",
         "{booktabs}",
+        "{dashrule}",
         "{enumitem}",
         "{hyperref}",
         "{multicol}",
@@ -164,11 +165,22 @@ def _render_latex_projects(projects):
         if project.link:
             url = f"(\\href{{{project.link}}}{{github}})"
         else:
-            url = ""
-        return f"{{\\textbf{{{project.name}}} {url}\\hspace{{1.5em}}-\\hspace{{1.5em}}{_escape_latex(project.description)}}}\\\\"
+            url = "(proprietary, no source)"
 
-    return "\\\\".join([_render_latex_project(project) for project in projects])
+        s = f"\\textbf{{{project.name}}}: "
+        s += _escape_latex(project.description)
+        s += f" {url}\\\\"
+        s += "\\textbf{Technologies}: "
+        s += _commas(*project.technologies)
+        s += "."
+        return s
 
+        
+    return "\\vspace{0.5em}\\\\\\yourlight{\\hdashrule{\\linewidth}{1pt}{2pt}}\\vspace{0.5em}\\\\".join([_render_latex_project(project) for project in projects[:6]])
+
+
+def _render_latex_row(*things):
+    return " & ".join(things) + "\\\\"
 
 
 def _escape_latex(text):

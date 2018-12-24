@@ -24,24 +24,25 @@ _extra_languages = [
 ]
 
 _jobs = [
-    Job("Instil Software",
-        "Belfast",
-        "Software Engineering Intern",
-        Date("July", 2016),
-        Date("September", 2016),
-        ["Kotlin", "AngularJS", "DropWizard", "PostgreSQL", "Swagger"],
-        "Full Stack Developer for a Time Tracking Tool. Built REST API & Email Service with Kotlin. "
-        "Increased test coverage by ~15% in first month. Maintained AngularJS frontend. "
-        "Received first-class training on Test-Driven Development and Refactoring."),
-
     Job("Arista Networks",
         "Dublin",
         "Software Engineering Intern",
         Date("June", 2017),
         Date("June", 2018),
         ["TACC", "C++", "C", "SSH", "Perforce"],
-        "Wrote & tested C++ deployed on high-performance switches around the world. "
-        "Worked exclusively in command-line environments using SSH, Tmux & Emacs. "),
+        "Wrote/Tested/Deployed C++ on high-performance switches around the world. "
+        "Maintained Arista EOS Operating System working exclusively in CLI. "
+        "Interacted with hardware."),
+
+    Job("Instil Software",
+        "Belfast",
+        "Software Engineering Intern",
+        Date("July", 2016),
+        Date("September", 2016),
+        ["Kotlin", "AngularJS", "DropWizard", "PostgreSQL", "Swagger"],
+        "Full Stack Developer. Built REST API & Email Service with Kotlin. "
+        "Increased test coverage by ~15% in first month. Maintained AngularJS frontend. "
+        "Received first-class training on TDD and Refactoring."),
 ]
 
 _projects = [
@@ -54,13 +55,13 @@ _projects = [
     Project(
         "Entua",
         "",
-        "Android/iOS IoT app. Go WebSocket backend. Android/iOs frontend with React Native & Redux. ",
+        "Android/iOS IoT app. Program smart devices within the Home. Go WebSocket backend. React Native frontend.",
         ["Go", "ES6", "React Native", "Redux"]),
 
     Project(
         "byxor.xyz",
         github("website"),
-        "My personal website.",
+        "Personal website.",
         ["Angular 5", "TypeScript"]),
 
     # Project(
@@ -71,26 +72,26 @@ _projects = [
     Project(
         "Passflip",
         github("passflip"),
-        "A lightweight SHA224-based password manager.",
-        []),
+        "A lightweight SHA224-based password manager. Installable via pip.",
+        ["Python"]),
 
     Project(
         "Slimput",
         github("slimput"),
-        "A faster way of scanning standard input for Java.",
-        []),
+        "Faster standard input scanners for Java.",
+        ["Java"]),
 
     Project(
         "Kapoki",
         github("kapoki"),
         "A multi-language skeleton generator for new projects.",
-        []),
+        ["Bash", "C++", "Python"]),
 
     Project(
         "Thought",
         github("thought"),
         "A compiler/tool to encourage articulated, exploratory, disciplined thinking.",
-        []),
+        ["C++"]),
 
     Project(
         "DecayQueueJs",
