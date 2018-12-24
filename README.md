@@ -1,6 +1,6 @@
 # cv
 
-Here are some tools I use to automatically generate and maintain my CV.
+Tools I use to generate and maintain my CV.
 
 ## Toolchain Summary
 
