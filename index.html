@@ -1,6 +1,6 @@
 <!doctype html>
-
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>CV</title>
@@ -9,8 +9,26 @@
 </head>
 
 <body>
-  <div id="pdfContainer" style="width: 100%; height: 1000px">
-    <embed id="frPDF" height="100%" width="100%" src="http://127.0.0.1:8080/cv.pdf"></embed>
-  </div>
+  <embed src="http://127.0.0.1:8080/cv.pdf"></embed>
 </body>
+
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+embed {
+    width: 100%;
+
+    height: -webkit-calc(100% - 15px);
+    height:    -moz-calc(100% - 15px);
+    height:         calc(100% - 15px);
+
+    margin: 0;
+    padding-bottom: 10px;
+}
+</style>
+
 </html>
