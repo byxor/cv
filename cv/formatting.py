@@ -14,7 +14,7 @@ def render_latex(content):
 
         "\\newcommand{\\yourlight}[1]{\\textcolor{gray}{#1}}",
         "\\newcommand{\\youremail}[1]{\\href{mailto:#1}{#1}}",
-        "\\newcommand{\\yoursocial}[2]{{\\Large #1}\\yourlight{\\url{#2}}}"
+        "\\newcommand{\\yoursocial}[2]{{\\Large #1}\\hspace{0.5em}\\yourlight{\\url{#2}}}"
         "\\newcommand{\\yourjustify}[1]{\makebox[\textwidth][s]{#1}}",
 
         "\\newcommand{\\yourtitle}[3]{",
@@ -51,6 +51,8 @@ def render_latex(content):
         "\\setlist{nosep}",
         "\\pagenumbering{gobble}",
 
+        "\\hypersetup{colorlinks, linkcolor={red!50!black}, citecolor={blue!50!black}, urlcolor={blue!70!black}}",
+
         # Document ####################################################################
 
         "\\begin{document}",
@@ -72,9 +74,17 @@ def render_latex(content):
         _render_latex_jobs(content.jobs),
 
         "\\section{Projects}",
+
+        "\\begin{multicols}{2}",
+        _render_latex_projects(content.projects),
+        "\\end{multicols}",
+
         "\\begin{center}",
         f" See more projects at \\url{{{content.website}/projects}}",
         "\\end{center}",
+
+        "\\section{Education}",
+        
 
         "\\yourfooter{",
         _render_wide_latex_strip([
@@ -133,25 +143,31 @@ def _render_thin_latex_strip(contents):
 
 
 def _render_latex_jobs(jobs):
+    def _render_latex_job(job):
+        return _lines(
+            f"\\subsection{{{job.company} ({job.location}) - {job.role}}}",
+            f"{_render_latex_date(job.start_date)} - {_render_latex_date(job.end_date)}",
+            "",
+            f"{_escape_latex(job.description)}",
+            "",
+            f"\\textbf{{Technologies: }}{_commas(*job.technologies)}",
+            "\\vspace{0.5em}",
+        )
+
+    def _render_latex_date(date):
+        if type(date) == str:
+            return date
+        return f"\\textbf{{{date.month} {date.year}}}"
+
     return "".join([_render_latex_job(job) for job in jobs])
 
 
-def _render_latex_job(job):
-    return _lines(
-        f"\\subsection{{{job.company} ({job.location}) - {job.role}}}",
-        f"{_render_latex_date(job.start_date)} - {_render_latex_date(job.end_date)}",
-        "",
-        f"{_escape_latex(job.description)}",
-        "",
-        f"\\textbf{{Technologies: }}{_commas(*job.technologies)}",
-        "\\vspace{0.5em}",
-    )
+def _render_latex_projects(projects):
+    def _render_latex_project(project):
+        return "foo\\\\"
 
+    return "".join([_render_latex_project(project) for project in projects])
 
-def _render_latex_date(date):
-    if type(date) == str:
-        return date
-    return f"\\textbf{{{date.month} {date.year}}}"
 
 
 def _escape_latex(text):

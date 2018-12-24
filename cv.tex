@@ -14,7 +14,7 @@
 \usepackage{xcolor}
 \newcommand{\yourlight}[1]{\textcolor{gray}{#1}}
 \newcommand{\youremail}[1]{\href{mailto:#1}{#1}}
-\newcommand{\yoursocial}[2]{{\Large #1}\yourlight{\url{#2}}}\newcommand{\yourjustify}[1]{\makebox[	extwidth][s]{#1}}
+\newcommand{\yoursocial}[2]{{\Large #1}\hspace{0.5em}\yourlight{\url{#2}}}\newcommand{\yourjustify}[1]{\makebox[	extwidth][s]{#1}}
 \newcommand{\yourtitle}[3]{
   \begin{center}
     {\huge\bfseries #1}\\
@@ -39,6 +39,7 @@
 \linespread{0.9}
 \setlist{nosep}
 \pagenumbering{gobble}
+\hypersetup{colorlinks, linkcolor={red!50!black}, citecolor={blue!50!black}, urlcolor={blue!70!black}}
 \begin{document}
 \yourtitle{Brandon Ibbotson}{brandon.ibbotson2@mail.dcu.ie}{www.byxor.xyz}
 \section{Overview}
@@ -63,9 +64,13 @@ Wrote \& tested C++ deployed on high-performance switches around the world. Work
 \textbf{Technologies: }TACC, C++, C, SSH
 \vspace{0.5em}
 \section{Projects}
+\begin{multicols}{2}
+foo\\foo\\foo\\foo\\foo\\foo\\foo\\foo\\
+\end{multicols}
 \begin{center}
  See more projects at \url{www.byxor.xyz/projects}
 \end{center}
+\section{Education}
 \yourfooter{
 \begin{tabularx}{\textwidth}{*3{>{\Centering}X}}
 \yoursocial{\faGithub}{www.github.com/byxor} & \yoursocial{\faStackOverflow}{www.stackoverflow.com/users/5601284} & \yoursocial{\faLaptop}{www.byxor.xyz}\\
