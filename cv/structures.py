@@ -13,7 +13,7 @@ Language = namedtuple("Language", ["name", "usage"])
 
 ExtraLanguage = namedtuple("ExtraLanguage", ["name"])
 
-Project = namedtuple("Project", ["name", "link", "description"])
+Project = namedtuple("Project", ["name", "link", "description", "technologies"])
 
 Hackathon = namedtuple("Hackathon", ["name", "year", "description"])
 

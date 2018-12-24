@@ -92,12 +92,9 @@ def render_latex(content):
             f"\\yoursocial{{\\faStackOverflow}}{{{content.stack_overflow}}}",
             f"\\yoursocial{{\\faLaptop}}{{{content.website}}}",
         ]),
-        "  ",
+        "",
         "  \\vspace{1em}",
-        "  ",
-        "  This CV was rendered with \\textbf{Python} {\\&} \\textbf{{\\LaTeX}}.\\\\",
-        "  Source code: \\url{www.github.com/byxor/cv}",
-
+        "  This CV was rendered with \\textbf{Python} {\\&} \\textbf{{\\LaTeX}} (\\url{www.github.com/byxor/cv}).\\\\",
         "}",
 
         "\\end{document}",
@@ -164,7 +161,11 @@ def _render_latex_jobs(jobs):
 
 def _render_latex_projects(projects):
     def _render_latex_project(project):
-        return f"{{\\textbf{{{project.name}}} - {_escape_latex(project.description)}}}\\\\"
+        if project.link:
+            url = f"(\\href{{{project.link}}}{{github}})"
+        else:
+            url = ""
+        return f"{{\\textbf{{{project.name}}} {url}\\hspace{{1.5em}}-\\hspace{{1.5em}}{_escape_latex(project.description)}}}\\\\"
 
     return "\\\\".join([_render_latex_project(project) for project in projects])
 

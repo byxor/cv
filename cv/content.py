@@ -1,12 +1,6 @@
 from cv.structures import *
 from cv.helpers import *
 
-_skills = [
-    "Test-Driven Development",
-    "Agile Development",
-    "Git",
-]
-
 _primary_languages = [
     Language("Go", "Introduced me to goroutines and channels as a concurrency model."),
     Language("Python", "Essential language for degree. Used in year-long team project and many personal projects."),
@@ -54,42 +48,55 @@ _projects = [
     Project(
         "LIMP",
         github("limp"),
-        "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, objects, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Written in Python 3.6."),
+        "Functional Programming Language Interpreter with 99% Test Coverage. Supports anonymous functions, objects, collections, strings, recursion, immutability, scoped constants, and a small standard library.",
+        ["Python3.6"]),
 
     Project(
-        "Website at byxor.xyz",
+        "Entua",
+        "",
+        "Android/iOS IoT app. Go WebSocket backend. Android/iOs frontend with React Native & Redux. ",
+        ["Go", "ES6", "React Native", "Redux"]),
+
+    Project(
+        "byxor.xyz",
         github("website"),
-        "A website built using Angular 5. Can be seen at http://www.byxor.xyz"),
+        "My personal website.",
+        ["Angular 5", "TypeScript"]),
 
     # Project(
     #     "Try LIMP - WebApp",
     #     None,
-    #     "A full-stack application to execute LIMP code in the browser. Web client written with ES6, JQuery and Bootstrap 3. Backend is a REST API written in Python using Flask, running on DigitalOcean VPS. Try it out at http://byxor.xyz/try-limp."),
+    #     "A full-stack application to execute LIMP code in the browser. Web client written with ES6, JQuery and Bootstrap 3. Backend is a REST API written in Python using Flask, running on DigitalOcean VPS. Try it out at byxor.xyz/try-limp."),
 
     Project(
         "Passflip",
         github("passflip"),
-        "A lightweight SHA224-based password manager."),
+        "A lightweight SHA224-based password manager.",
+        []),
 
     Project(
         "Slimput",
         github("slimput"),
-        "A faster way of scanning standard input for Java."),
+        "A faster way of scanning standard input for Java.",
+        []),
 
     Project(
         "Kapoki",
         github("kapoki"),
-        "A multi-language skeleton generator for new projects."),
+        "A multi-language skeleton generator for new projects.",
+        []),
 
     Project(
         "Thought",
         github("thought"),
-        "A compiler/tool to encourage articulated, exploratory, disciplined thinking."),
+        "A compiler/tool to encourage articulated, exploratory, disciplined thinking.",
+        []),
 
     Project(
         "DecayQueueJs",
         github("DecayQueueJs"),
-        "A JavaScript Data Structure that removes old elements automatically."),
+        "A JavaScript Data Structure that removes old elements automatically.",
+        []),
 ]
 
 _events = [
@@ -111,7 +118,7 @@ class Data:
     website = "www.byxor.xyz"
     github = "www.github.com/byxor"
     stack_overflow = "www.stackoverflow.com/users/5601284"
-    skills = _skills
+    skills = ["Test-Driven Development", "Agile", "Git"]
     primary_languages = _primary_languages
     extra_languages = _extra_languages
     jobs = _jobs
