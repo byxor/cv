@@ -9,7 +9,7 @@ export = lambda content: NotImplementedError()
 def render_latex(content):
     return _lines(
         "\\documentclass{article}",
-        
+
         *_latex_packages(),
 
         "\\newcommand{\\yourlight}[1]{\\textcolor{gray}{#1}}",
@@ -38,6 +38,7 @@ def render_latex(content):
 
         "\\titleformat{\\section}{\\huge\\bfseries}{}{0em}{}[\\titlerule]",
         # "\\titleformat{\\subsection}[runin]{\\bfseries}{}{5em}{}[:]",
+        "\\titleformat{\\subsection}{\\bfseries}{}{5em}{}[:]",
         "\\titlespacing{\\subsection}{0pt}{1ex}{5ex}",
 
         "\\newcolumntype{b}{X}",
@@ -90,6 +91,7 @@ def render_latex(content):
         "  ",
         "  This CV was rendered with \\textbf{Python} {\\&} \\textbf{{\\LaTeX}}.\\\\",
         "  Source code: \\url{www.github.com/byxor/cv}",
+
         "}",
 
         "\\end{document}",

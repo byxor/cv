@@ -1,7 +1,12 @@
 #!/bin/bash
 
 set -e
-trap 'shout "Something went wrong, sorry."' ERR
+trap 'onError' ERR
+
+function onError {
+    shout "Something went wrong, sorry."
+    notify-send "CV: Build Failed."
+}
 
 shouts=0
 function shout {
@@ -23,5 +28,7 @@ xelatex cv < /dev/null
 
 # shout "Displaying PDF..."
 # firefox cv.pdf
+
+notify-send "CV: Build Successful."
 
 shout "Done!"
