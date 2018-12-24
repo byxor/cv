@@ -45,26 +45,26 @@ _jobs = [
         "Software Engineering Intern",
         Date("June", 2017),
         Date("June", 2018),
-        ["TACC", "C++", "C", "SSH"],
+        ["TACC", "C++", "C", "SSH", "Perforce"],
         "Wrote & tested C++ deployed on high-performance switches around the world. "
         "Worked exclusively in command-line environments using SSH, Tmux & Emacs. "),
 ]
 
 _projects = [
     Project(
-        "LIMP Programming Language",
+        "LIMP",
         github("limp"),
-        "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Soon to support objects and modules. Written in Python 3.6."),
+        "Functional Programming Language Interpreter with 98% Test Coverage. Supports anonymous functions, objects, collections, strings, recursion, immutability, scoped constants. Has a small standard library. Written in Python 3.6."),
 
     Project(
         "Website at byxor.xyz",
         github("website"),
         "A website built using Angular 5. Can be seen at http://www.byxor.xyz"),
 
-    Project(
-        "Try LIMP - WebApp",
-        None,
-        "A full-stack application to execute LIMP code in the browser. Web client written with ES6, JQuery and Bootstrap 3. Backend is a REST API written in Python using Flask, running on DigitalOcean VPS. Try it out at http://byxor.xyz/try-limp."),
+    # Project(
+    #     "Try LIMP - WebApp",
+    #     None,
+    #     "A full-stack application to execute LIMP code in the browser. Web client written with ES6, JQuery and Bootstrap 3. Backend is a REST API written in Python using Flask, running on DigitalOcean VPS. Try it out at http://byxor.xyz/try-limp."),
 
     Project(
         "Passflip",

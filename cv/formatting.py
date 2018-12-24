@@ -164,9 +164,9 @@ def _render_latex_jobs(jobs):
 
 def _render_latex_projects(projects):
     def _render_latex_project(project):
-        return "foo\\\\"
+        return f"{{\\textbf{{{project.name}}} - {_escape_latex(project.description)}}}\\\\"
 
-    return "".join([_render_latex_project(project) for project in projects])
+    return "\\\\".join([_render_latex_project(project) for project in projects])
 
 
 
