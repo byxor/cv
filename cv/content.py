@@ -28,9 +28,9 @@ _jobs = [
         "Dublin",
         "Software Engineering Intern",
         DateRange(Date("June", 2017), Date("June", 2018)),
-        ["TACC", "C++", "C", "SSH", "Perforce"],
+        ["TACC", "C++", "C", "Perforce"],
         "Wrote/Tested/Deployed TACC & C++ on high-performance switches around the world. "
-        "Maintained Arista EOS Operating System working exclusively in CLI. "
+        "Maintained Arista EOS Operating System. Worked exclusively in CLI over SSH. "
         "Interacted with switch hardware."),
 
     Job("Instil Software",
@@ -50,8 +50,8 @@ _educations = [
               "Computational Problem Solving & Software Development",
               "C.P.S.S.D.",
               DateRange(Date("September", 2015), Date("June", 2019)),
-              "Innovative degree program."
-    ),
+              "Innovative degree program for students with pre-existing programming experience.",
+              "www.cpssd.net"),
 ]
 
 _projects = [
@@ -64,8 +64,8 @@ _projects = [
     Project(
         "Entua",
         "",
-        "Android/iOS IoT app. Program smart devices within the Home. Go WebSocket backend. React Native frontend.",
-        ["Go", "ES6", "React Native", "Redux"]),
+        "Android/iOS IoT app to configure events on smart devices within the Home. React-Native frontend. Go WebSocket backend. Raspberry Pi Hub.",
+        ["Go", "ES6", "React-Native", "Redux"]),
 
     Project(
         "byxor.xyz",
@@ -87,7 +87,7 @@ _projects = [
     Project(
         "Slimput",
         github("slimput"),
-        "Faster standard input scanners for Java.",
+        "Faster input scanners for Java.",
         ["Java"]),
 
     Project(

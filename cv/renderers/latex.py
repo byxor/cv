@@ -82,8 +82,8 @@ def commands():
 
 def settings():
     return [
-        "\\titleformat{\\section}{\\LARGE\\bfseries}{}{0em}{}[\\titlerule]",
-        "\\titlespacing{\\section}{0em}{1.1em}{0.6em}",
+        "\\titleformat{\\section}{\\LARGE\\bfseries}{}{1em}{}[\\titlerule]",
+        "\\titlespacing{\\section}{0em}{1.4em}{0.7em}",
 
         "\\titlespacing{\\subsection}{0em}{0.5em}{-0.2em}",
 
@@ -148,24 +148,6 @@ def commands():
     ]
 
 
-def settings():
-    return [
-        "\\titleformat{\\section}{\\LARGE\\bfseries}{}{0em}{}[\\titlerule]",
-        "\\titlespacing{\\section}{0em}{1.1em}{0.6em}",
-
-        "\\titlespacing{\\subsection}{0em}{0.5em}{-0.2em}",
-
-        "\\newcolumntype{b}{X}",
-        "\\newcolumntype{s}{>{\hsize=.5\hsize}X}",
-
-        "\\linespread{0.9}",
-        "\\setlist{nosep}",
-        "\\pagenumbering{gobble}",
-
-        "\\hypersetup{colorlinks, linkcolor={red!50!black}, citecolor={blue!50!black}, urlcolor={blue!70!black}}",
-    ]
-
-
 def overview(content):
     space = "\\vspace{0.75em}"
     return [
@@ -203,10 +185,11 @@ def jobs(jobs):
 def educations(educations):
     ed = educations[0]
     return [
-        f"\\subsection{{{ed.institution}, {ed.location}}}",
-        f"{_dates(ed.dates)}",
+        f"{{\\large\\textbf{{{ed.institution}, {ed.location}}}}}: {_dates(ed.dates)}",
         "",
-        f"\\textbf{{{ed.type}}} {_escape(ed.name)}\\\\"
+        f"\\textbf{{{ed.type} {_escape(ed.name)}}}",
+        "",
+        f"{{Find out more at \\url{{{ed.link}}}}}",
     ]
 
 
@@ -246,21 +229,22 @@ def projects(content):
 
     chosen_projects = projects[:6]
 
-    between_projects = "\\vspace{1em}\\\\"
+    between_projects = "\\vspace{1.5em}\\\\"
 
     return [
+        "\\vspace{1em}",
         "\\begin{multicols}{2}",
         between_projects.join([project(p) for p in chosen_projects]),
         "\\end{multicols}",
-
         "\\begin{center}",
-        f" See more projects at \\url{{{content.website}/projects}}",
+        "\\vspace{1em}",
+        f"See more projects at \\url{{{content.website}/projects}}",
         "\\end{center}",
     ]
 
 
 def technologies(technologies):
-    return f"\\textbf{{Technologies}}: {_escape(commas(*technologies))}"
+    return f"\\textit{{\\textbf{{Technologies}}: {_escape(commas(*technologies))}}}"
 
 
 #########################

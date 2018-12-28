@@ -15,7 +15,8 @@ Education = namedtuple("Education",
                         "name",
                         "short_name",
                         "dates",
-                        "description"])
+                        "description",
+                        "link"])
 
 Language = namedtuple("Language", ["name", "usage"])
 
