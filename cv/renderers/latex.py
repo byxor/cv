@@ -89,6 +89,8 @@ def settings():
 
         "\\newcolumntype{b}{X}",
         "\\newcolumntype{s}{>{\hsize=.5\hsize}X}",
+        "\\setlength{\\columnseprule}{0.4pt}",
+        "\\setlength\\multicolsep{0pt}",
 
         "\\linespread{0.9}",
         "\\setlist{nosep}",
@@ -187,11 +189,11 @@ def jobs(jobs):
     def job(j):
         return lines(
             f"\\subsection{{{j.company} ({j.location}) - {j.role}}}",
-            f"{j.dates}",
+            f"{_dates(j.dates)}",
             "",
             f"{_escape(j.description)}",
             "",
-            f"\\textbf{{Technologies}}: {commas(*j.technologies)}",
+            technologies(j.technologies),
             "\\vspace{0.5em}",
         )
 
@@ -201,8 +203,8 @@ def jobs(jobs):
 def educations(educations):
     ed = educations[0]
     return [
-        f"\\subsection{{{ed.institution}}}",
-        f"{ed.dates}",
+        f"\\subsection{{{ed.institution}, {ed.location}}}",
+        f"{_dates(ed.dates)}",
         "",
         f"\\textbf{{{ed.type}}} {_escape(ed.name)}\\\\"
     ]
@@ -232,15 +234,19 @@ def projects(content):
         else:
             url = "(proprietary, no source)"
 
-        s = f"\\textbf{{{project.name}}}: "
+        s = ""
+        s = "\\parbox{\\linewidth}{"
+        s += f"\\textbf{{{project.name}}} - "
         s += _escape(project.description)
-        s += f"{url}\\\\"
-        s += "\\textbf{Technologies}: "
-        s += commas(*project.technologies) + "."
+        s += f" {url}\\\\"
+        s += "\n"
+        s += technologies(project.technologies)
+        s += "}"
         return s
 
     chosen_projects = projects[:6]
-    between_projects = "\\vspace{0.5em}\\\\\\yourlight{\\hdashrule{\\linewidth}{1pt}{2pt}}\\vspace{0.5em}\\\\"
+
+    between_projects = "\\vspace{1em}\\\\"
 
     return [
         "\\begin{multicols}{2}",
@@ -251,6 +257,10 @@ def projects(content):
         f" See more projects at \\url{{{content.website}/projects}}",
         "\\end{center}",
     ]
+
+
+def technologies(technologies):
+    return f"\\textbf{{Technologies}}: {_escape(commas(*technologies))}"
 
 
 #########################
@@ -277,7 +287,7 @@ def _escape(text):
 
 def _wide_strip(contents):
     return lines(
-        f"\\begin{{tabularx}}{{\\textwidth}}{{*{len(contents)}{{>{{\\Centering}}X}}}}",
+        f"\\begin{{tabularx}}{{\\linewidth}}{{*{len(contents)}{{>{{\\Centering}}X}}}}",
         _row(*contents),
         "\\end{tabularx}",
     )
@@ -287,5 +297,5 @@ def _row(*things):
     return " & ".join(things) + "\\\\"
 
 
-def _date(date):
-    return f"\\textbf{{{date}}}"
+def _dates(dates):
+    return f"\\textit{{{dates}}}"

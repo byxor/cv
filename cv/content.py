@@ -45,7 +45,7 @@ _jobs = [
 
 _educations = [
     Education("Dublin City University",
-              "Dublin",
+              "Ireland",
               "BSc.",
               "Computational Problem Solving & Software Development",
               "C.P.S.S.D.",
