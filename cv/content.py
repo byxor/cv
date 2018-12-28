@@ -31,7 +31,7 @@ _jobs = [
         ["TACC", "C++", "C", "Perforce"],
         "Wrote/Tested/Deployed TACC & C++ on high-performance switches around the world. "
         "Maintained Arista EOS Operating System. Worked exclusively in CLI over SSH. "
-        "Interacted with switch hardware."),
+        "Interacted with switch hardware to toggle various features."),
 
     Job("Instil Software",
         "Belfast",

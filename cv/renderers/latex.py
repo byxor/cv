@@ -35,7 +35,7 @@ def render(content):
 
 def packages():
     return [f"\\usepackage{p}" for p in [
-        "[a4paper, left=1in, right=1in, top=15mm, bottom=6mm]{geometry}",
+        "[a4paper, left=0.9in, right=0.9in, top=15mm, bottom=6mm]{geometry}",
         "{fontawesome}",
         "{changepage}",
         "{booktabs}",
@@ -97,54 +97,6 @@ def settings():
         "\\pagenumbering{gobble}",
 
         "\\hypersetup{colorlinks, linkcolor={red!50!black}, citecolor={blue!50!black}, urlcolor={blue!70!black}}",
-    ]
-
-
-def packages():
-    return [f"\\usepackage{p}" for p in [
-        "[a4paper, left=1in, right=1in, top=15mm, bottom=6mm]{geometry}",
-        "{fontawesome}",
-        "{changepage}",
-        "{booktabs}",
-        "{dashrule}",
-        "{enumitem}",
-        "{hyperref}",
-        "{multicol}",
-        "{ragged2e}",
-        "{tabularx}",
-        "{titlesec}",
-        "{parskip}",
-        "{titling}",
-        "{lipsum}",
-        "{xcolor}",
-    ]]
-
-
-def commands():
-    return [
-        "\\newcommand{\\yourlight}[1]{\\textcolor{gray}{#1}}",
-        "\\newcommand{\\youremail}[1]{\\href{mailto:#1}{#1}}",
-        "\\newcommand{\\yoursocial}[2]{{\\Large #1}\\hspace{0.5em}\\yourlight{\\url{#2}}}"
-        "\\newcommand{\\yourjustify}[1]{\makebox[\textwidth][s]{#1}}",
-
-        "\\newcommand{\\yourtitle}[3]{",
-        "  \\begin{center}",
-        "    {\\huge\\bfseries #1}\\\\",
-        "    \\vspace{.5em}",
-        "    \\youremail{#2}\\\\",
-        "    \\url{#3}\\\\",
-        "    \\vspace{.7em}",
-        "  \\end{center}",
-        "}",
-
-        "\\newcommand{\\yourfooter}[1]{",
-        "  \\vspace*{\\fill}",
-        "  \\begin{center}",
-        "    #1",
-        "  \\end{center}",
-        "}",
-
-        "\\newcommand{\\yourmiddle}[1]{\\noindent\\parbox[c]{\\hsize}{#1}}",
     ]
 
 
