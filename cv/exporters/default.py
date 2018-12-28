@@ -1,0 +1,1 @@
+export = lambda content: NotImplementedError()

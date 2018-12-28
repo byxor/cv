@@ -65,7 +65,6 @@ def commands():
         "    \\vspace{0.5em}",
         "    \\youremail{#2}\\\\",
         "    \\url{#3}\\\\",
-        # "    \\vspace{0.7em}",
         "  \\end{center}",
         "}",
 
