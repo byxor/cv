@@ -30,9 +30,9 @@ _jobs = [
         Date("June", 2017),
         Date("June", 2018),
         ["TACC", "C++", "C", "SSH", "Perforce"],
-        "Wrote/Tested/Deployed C++ on high-performance switches around the world. "
+        "Wrote/Tested/Deployed TACC & C++ on high-performance switches around the world. "
         "Maintained Arista EOS Operating System working exclusively in CLI. "
-        "Interacted with hardware."),
+        "Interacted with switch hardware."),
 
     Job("Instil Software",
         "Belfast",
@@ -43,6 +43,18 @@ _jobs = [
         "Full Stack Developer. Built REST API & Email Service with Kotlin. "
         "Increased test coverage by ~15% in first month. Maintained AngularJS frontend. "
         "Received first-class training on TDD and Refactoring."),
+]
+
+_educations = [
+    Education("Dublin City University",
+              "Dublin",
+              "BSc.",
+              "Computational Problem Solving & Software Development",
+              "C.P.S.S.D.",
+              Date("September", 2015),
+              Date("June", 2019),
+              "Innovative degree program."
+    ),
 ]
 
 _projects = [
@@ -123,5 +135,6 @@ class Data:
     primary_languages = _primary_languages
     extra_languages = _extra_languages
     jobs = _jobs
+    educations = _educations
     projects = _projects
     events = _events

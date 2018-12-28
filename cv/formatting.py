@@ -39,9 +39,8 @@ def render_latex(content):
         ###
 
         "\\titleformat{\\section}{\\LARGE\\bfseries}{}{0em}{}[\\titlerule]",
-        "\\titlespacing{\\section}{0em}{1em}{1em}",
+        "\\titlespacing{\\section}{0em}{1.1em}{0.6em}",
 
-        # "\\titleformat{\\subsection}{\\bfseries}{}{1em}{}[]",
         "\\titlespacing{\\subsection}{0em}{0.5em}{-0.2em}",
 
         "\\newcolumntype{b}{X}",
@@ -83,16 +82,16 @@ def render_latex(content):
         "\\end{center}",
 
         "\\section{Education}",
-        
+        _render_latex_educations(content.educations),
 
         "\\yourfooter{",
+        "\\vspace{1em}",
         _render_wide_latex_strip([
             f"\\yoursocial{{\\faGithub}}{{{content.github}}}",
             f"\\yoursocial{{\\faStackOverflow}}{{{content.stack_overflow}}}",
             f"\\yoursocial{{\\faLaptop}}{{{content.website}}}",
         ]),
         "",
-        # "  \\vspace{0.5em}",
         "  This CV was rendered with \\textbf{Python} {\\&} \\textbf{{\\LaTeX}} (\\url{www.github.com/byxor/cv}).\\\\",
         "}",
 
@@ -152,12 +151,24 @@ def _render_latex_jobs(jobs):
             "\\vspace{0.5em}",
         )
 
-    def _render_latex_date(date):
-        if type(date) == str:
-            return date
-        return f"\\textbf{{{date.month} {date.year}}}"
-
     return "".join([_render_latex_job(job) for job in jobs])
+
+
+def _render_latex_educations(educations):
+    ed = educations[0]
+    dates = f"{_render_latex_date(ed.start_date)} - {_render_latex_date(ed.end_date)}"
+    return _lines(
+        f"\\subsection{{{ed.institution}}}",
+        f"{dates}",
+        "",
+        f"\\textbf{{{ed.type}}} {_escape_latex(ed.name)}\\\\"
+    )
+
+
+def _render_latex_date(date):
+    if type(date) == str:
+        return date
+    return f"\\textbf{{{date.month} {date.year}}}"
 
 
 def _render_latex_projects(projects):

@@ -9,6 +9,16 @@ Job = namedtuple("Job",
                   "technologies",
                   "description"])
 
+Education = namedtuple("Education",
+                       ["institution",
+                        "location",
+                        "type",
+                        "name",
+                        "short_name",
+                        "start_date",
+                        "end_date",
+                        "description"])
+
 Language = namedtuple("Language", ["name", "usage"])
 
 ExtraLanguage = namedtuple("ExtraLanguage", ["name"])
