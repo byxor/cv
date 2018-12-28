@@ -1,4 +1,5 @@
 from cv.helpers import lines, commas
+from cv.structures import DateRange
 import re
 
 
@@ -186,7 +187,7 @@ def jobs(jobs):
     def job(j):
         return lines(
             f"\\subsection{{{j.company} ({j.location}) - {j.role}}}",
-            f"{_date(j.start_date)} - {_date(j.end_date)}",
+            f"{j.dates}",
             "",
             f"{_escape(j.description)}",
             "",
@@ -199,10 +200,9 @@ def jobs(jobs):
 
 def educations(educations):
     ed = educations[0]
-    dates = f"{_date(ed.start_date)} - {_date(ed.end_date)}"
     return [
         f"\\subsection{{{ed.institution}}}",
-        f"{dates}",
+        f"{ed.dates}",
         "",
         f"\\textbf{{{ed.type}}} {_escape(ed.name)}\\\\"
     ]
@@ -288,6 +288,4 @@ def _row(*things):
 
 
 def _date(date):
-    if type(date) == str:
-        return date
-    return f"\\textbf{{{date.month} {date.year}}}"
+    return f"\\textbf{{{date}}}"

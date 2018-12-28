@@ -4,8 +4,7 @@ Job = namedtuple("Job",
                  ["company",
                   "location",
                   "role",
-                  "start_date",
-                  "end_date",
+                  "dates",
                   "technologies",
                   "description"])
 
@@ -15,8 +14,7 @@ Education = namedtuple("Education",
                         "type",
                         "name",
                         "short_name",
-                        "start_date",
-                        "end_date",
+                        "dates",
                         "description"])
 
 Language = namedtuple("Language", ["name", "usage"])
@@ -27,4 +25,12 @@ Project = namedtuple("Project", ["name", "link", "description", "technologies"])
 
 Hackathon = namedtuple("Hackathon", ["name", "year", "description"])
 
-Date = namedtuple("Date", ["month", "year"])
+
+class Date(namedtuple("Date", ["month", "year"])):
+    def __str__(self):
+        return f"{self.month} {self.year}"
+
+
+class DateRange(namedtuple("DateRange", ["start", "end"])):
+    def __str__(self):
+        return f"{self.start} - {self.end}"

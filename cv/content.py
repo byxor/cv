@@ -27,8 +27,7 @@ _jobs = [
     Job("Arista Networks",
         "Dublin",
         "Software Engineering Intern",
-        Date("June", 2017),
-        Date("June", 2018),
+        DateRange(Date("June", 2017), Date("June", 2018)),
         ["TACC", "C++", "C", "SSH", "Perforce"],
         "Wrote/Tested/Deployed TACC & C++ on high-performance switches around the world. "
         "Maintained Arista EOS Operating System working exclusively in CLI. "
@@ -37,8 +36,7 @@ _jobs = [
     Job("Instil Software",
         "Belfast",
         "Software Engineering Intern",
-        Date("July", 2016),
-        Date("September", 2016),
+        DateRange(Date("July", 2016), Date("September", 2016)),
         ["Kotlin", "AngularJS", "DropWizard", "PostgreSQL", "Swagger"],
         "Full Stack Developer. Built REST API & Email Service with Kotlin. "
         "Increased test coverage by ~15% in first month. Maintained AngularJS frontend. "
@@ -51,8 +49,7 @@ _educations = [
               "BSc.",
               "Computational Problem Solving & Software Development",
               "C.P.S.S.D.",
-              Date("September", 2015),
-              Date("June", 2019),
+              DateRange(Date("September", 2015), Date("June", 2019)),
               "Innovative degree program."
     ),
 ]
