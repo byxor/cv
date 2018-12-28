@@ -1,0 +1,1 @@
+render = lambda content: NotImplementedError()
