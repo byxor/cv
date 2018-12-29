@@ -17,12 +17,12 @@
 \newcommand{\yourlight}[1]{\textcolor{gray}{#1}}
 \newcommand{\youremail}[1]{\href{mailto:#1}{#1}}
 \newcommand{\yoursocial}[2]{{\Large #1}\hspace{0.5em}\yourlight{\url{#2}}}\newcommand{\yourjustify}[1]{\makebox[	extwidth][s]{#1}}
-\newcommand{\yourtitle}[3]{
+\newcommand{\yourtitle}[4]{
   \begin{center}
     {\huge\bfseries #1}\\
     \vspace{0.5em}
-    \youremail{#2}\\
-    \url{#3}\\
+    \youremail{#3}\\
+    {#2}\\
   \end{center}
 }
 \newcommand{\yourfooter}[1]{
@@ -44,14 +44,14 @@
 \pagenumbering{gobble}
 \hypersetup{colorlinks, linkcolor={red!50!black}, citecolor={blue!50!black}, urlcolor={blue!70!black}}
 \begin{document}
-\yourtitle{Brandon Ibbotson}{brandon.ibbotson2@mail.dcu.ie}{www.byxor.xyz}
+\yourtitle{Brandon Ibbotson}{Ballymena, Co. Antrim}{brandon.ibbotson2@mail.dcu.ie}{www.byxor.xyz}
 \section{Overview}
 \begin{tabularx}{\textwidth}{ll}
 \vspace{0.75em}
-\textbf{Skills} & Test-Driven Development, Agile, Git\\
+\textbf{Skills} & Test-Driven Development, {} Agile, {} Git\\
 \vspace{0.75em}
-\textbf{Primary Languages} & Go, Python, Kotlin, JavaScript (ES6/ES7), Java, C, C++\\
-\textbf{Extra Languages} & Haskell, x86, x64, LIMP, UnityScript, Ruby, Clojure, Prolog\\
+\textbf{Primary Languages} & Go, {} Python, {} Kotlin, {} JavaScript (ES6/ES7), {} Java, {} C, {} C++\\
+\textbf{Extra Languages} & Haskell, {} Intel x86/x64, {} LIMP, {} C\#, {} UnityScript, {} Ruby, {} Clojure, {} Prolog\\
 \end{tabularx}
 \section{Experience}
 \subsection{Arista Networks (Dublin) - Software Engineering Intern}
@@ -71,9 +71,9 @@ Full Stack Developer. Built REST API \& Email Service with Kotlin. Increased tes
 \section{Projects}
 \vspace{1em}
 \begin{multicols}{2}
-\parbox{\linewidth}{\textbf{LIMP} - Functional Programming Language Interpreter with 99\% Test Coverage. Supports anonymous functions, objects, collections, strings, recursion, immutability, scoped constants, and a small standard library. (\href{http://www.github.com/byxor/limp}{github})\\
+\parbox{\linewidth}{\textbf{LIMP} - Functional Programming Language with 99\% Test Coverage. Interpreter supports anonymous functions, objects, collections, strings, recursion, immutability, scoped constants, and a small standard library. Comes with a REPL. (\href{http://www.github.com/byxor/limp}{github})\\
 \textit{\textbf{Technologies}: Python3.6}}\vspace{1.5em}\\\parbox{\linewidth}{\textbf{Entua} - Android/iOS IoT app to configure events on smart devices within the Home. React-Native frontend. Go WebSocket backend. Raspberry Pi Hub. (proprietary, no source)\\
-\textit{\textbf{Technologies}: Go, ES6, React-Native, Redux}}\vspace{1.5em}\\\parbox{\linewidth}{\textbf{byxor.xyz} - Personal website. (\href{http://www.github.com/byxor/website}{github})\\
+\textit{\textbf{Technologies}: Go, ES6, React-Native, Redux}}\vspace{1.5em}\\\parbox{\linewidth}{\textbf{byxor.xyz} - Personal website. Hosts my programming blog and small interactive demos. (\href{http://www.github.com/byxor/website}{github})\\
 \textit{\textbf{Technologies}: Angular 5, TypeScript}}\vspace{1.5em}\\\parbox{\linewidth}{\textbf{Passflip} - A lightweight SHA224-based password manager. Installable via pip. (\href{http://www.github.com/byxor/passflip}{github})\\
 \textit{\textbf{Technologies}: Python}}\vspace{1.5em}\\\parbox{\linewidth}{\textbf{Slimput} - Faster input scanners for Java. (\href{http://www.github.com/byxor/slimput}{github})\\
 \textit{\textbf{Technologies}: Java}}\vspace{1.5em}\\\parbox{\linewidth}{\textbf{Kapoki} - A multi-language skeleton generator for new projects. (\href{http://www.github.com/byxor/kapoki}{github})\\

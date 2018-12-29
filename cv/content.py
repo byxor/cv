@@ -13,9 +13,9 @@ _primary_languages = [
 
 _extra_languages = [
     ExtraLanguage("Haskell"),
-    ExtraLanguage("x86"),
-    ExtraLanguage("x64"),
+    ExtraLanguage("Intel x86/x64"),
     ExtraLanguage("LIMP"),
+    ExtraLanguage("C#"),
     ExtraLanguage("UnityScript"),
     ExtraLanguage("Ruby"),
     ExtraLanguage("Clojure"),
@@ -58,7 +58,7 @@ _projects = [
     Project(
         "LIMP",
         github("limp"),
-        "Functional Programming Language Interpreter with 99% Test Coverage. Supports anonymous functions, objects, collections, strings, recursion, immutability, scoped constants, and a small standard library.",
+        "Functional Programming Language with 99% Test Coverage. Interpreter supports anonymous functions, objects, collections, strings, recursion, immutability, scoped constants, and a small standard library. Comes with a REPL.",
         ["Python3.6"]),
 
     Project(
@@ -70,7 +70,7 @@ _projects = [
     Project(
         "byxor.xyz",
         github("website"),
-        "Personal website.",
+        "Personal website. Hosts my programming blog and small interactive demos.",
         ["Angular 5", "TypeScript"]),
 
     # Project(
@@ -127,6 +127,7 @@ class Data:
     email = decode("oenaqba.voobgfba2@znvy.qph.vr")
     website = "www.byxor.xyz"
     github = "www.github.com/byxor"
+    address = "Ballymena, Co. Antrim"
     stack_overflow = "www.stackoverflow.com/users/5601284"
     skills = ["Test-Driven Development", "Agile", "Git"]
     primary_languages = _primary_languages

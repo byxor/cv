@@ -13,7 +13,7 @@ def render(content):
 
         "\\begin{document}",
 
-        f"\\yourtitle{{{content.name}}}{{{content.email}}}{{{content.website}}}",
+        f"\\yourtitle{{{content.name}}}{{{content.address}}}{{{content.email}}}{{{content.website}}}",
 
         "\\section{Overview}",
         *overview(content),
@@ -60,12 +60,13 @@ def commands():
         "\\newcommand{\\yoursocial}[2]{{\\Large #1}\\hspace{0.5em}\\yourlight{\\url{#2}}}"
         "\\newcommand{\\yourjustify}[1]{\makebox[\textwidth][s]{#1}}",
 
-        "\\newcommand{\\yourtitle}[3]{",
+        "\\newcommand{\\yourtitle}[4]{",
         "  \\begin{center}",
         "    {\\huge\\bfseries #1}\\\\",
         "    \\vspace{0.5em}",
-        "    \\youremail{#2}\\\\",
-        "    \\url{#3}\\\\",
+        "    \\youremail{#3}\\\\",
+        "    {#2}\\\\",
+        # "    \\url{#4}\\\\",
         "  \\end{center}",
         "}",
 
@@ -106,14 +107,14 @@ def overview(content):
         "\\begin{tabularx}{\\textwidth}{ll}",
         space,
 
-        _row("\\textbf{Skills}", commas(*content.skills)),
+        _row("\\textbf{Skills}", _wide_commas(*content.skills)),
         space,
 
         _row("\\textbf{Primary Languages}",
-             commas(*[language.name for language in content.primary_languages])),
+             _wide_commas(*[_escape(language.name) for language in content.primary_languages])),
 
         _row("\\textbf{Extra Languages}",
-             commas(*[language.name for language in content.extra_languages])),
+             _wide_commas(*[_escape(language.name) for language in content.extra_languages])),
 
         "\\end{tabularx}",
     ]
@@ -200,6 +201,10 @@ def technologies(technologies):
 
 
 #########################
+
+
+def _wide_commas(*things):
+    return ", {} ".join(things)
 
 
 def _escape(text):
