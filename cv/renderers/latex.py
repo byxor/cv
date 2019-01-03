@@ -57,7 +57,7 @@ def commands():
     return [
         "\\newcommand{\\yourlight}[1]{\\textcolor{gray}{#1}}",
         "\\newcommand{\\youremail}[1]{\\href{mailto:#1}{#1}}",
-        "\\newcommand{\\yoursocial}[2]{{\\Large #1}\\hspace{0.5em}\\yourlight{\\url{#2}}}"
+        "\\newcommand{\\yoursocial}[2]{{\\Large #1}\\hspace{0.5em}\\yourlight{\\href{https://#2}{#2}}}"
         "\\newcommand{\\yourjustify}[1]{\makebox[\textwidth][s]{#1}}",
 
         "\\newcommand{\\yourtitle}[4]{",
@@ -156,7 +156,7 @@ def footer(content):
             f"\\yoursocial{{\\faLaptop}}{{{content.website}}}",
         ]),
         "",
-        "This CV was rendered with \\textbf{Python} {\\&} \\textbf{{\\LaTeX}} (\\url{www.github.com/byxor/cv}).\\\\",
+        "This CV was rendered with \\textbf{Python} {\\&} \\textbf{{\\LaTeX}} (\\url{https://www.github.com/byxor/cv}).\\\\",
         "}",
     ]
 

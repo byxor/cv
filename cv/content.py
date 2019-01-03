@@ -121,14 +121,13 @@ _events = [
     Hackathon("Arista Hack-a-Switch", 2017, ""),
 ]
 
-
 class Data:
     name = "Brandon Ibbotson"
     email = decode("oenaqba.voobgfba2@znvy.qph.vr")
     website = "www.byxor.xyz"
     github = "www.github.com/byxor"
-    address = "Ballymena, Co. Antrim"
     stack_overflow = "www.stackoverflow.com/users/5601284"
+    address = "Ballymena, Co. Antrim"
     skills = ["Test-Driven Development", "Agile", "Git"]
     primary_languages = _primary_languages
     extra_languages = _extra_languages

@@ -16,7 +16,7 @@
 \usepackage{xcolor}
 \newcommand{\yourlight}[1]{\textcolor{gray}{#1}}
 \newcommand{\youremail}[1]{\href{mailto:#1}{#1}}
-\newcommand{\yoursocial}[2]{{\Large #1}\hspace{0.5em}\yourlight{\url{#2}}}\newcommand{\yourjustify}[1]{\makebox[	extwidth][s]{#1}}
+\newcommand{\yoursocial}[2]{{\Large #1}\hspace{0.5em}\yourlight{\href{https://#2}{#2}}}\newcommand{\yourjustify}[1]{\makebox[	extwidth][s]{#1}}
 \newcommand{\yourtitle}[4]{
   \begin{center}
     {\huge\bfseries #1}\\
@@ -95,6 +95,6 @@ See more projects at \url{www.byxor.xyz/projects}
 \yoursocial{\faGithub}{www.github.com/byxor} & \yoursocial{\faStackOverflow}{www.stackoverflow.com/users/5601284} & \yoursocial{\faLaptop}{www.byxor.xyz}\\
 \end{tabularx}
 
-This CV was rendered with \textbf{Python} {\&} \textbf{{\LaTeX}} (\url{www.github.com/byxor/cv}).\\
+This CV was rendered with \textbf{Python} {\&} \textbf{{\LaTeX}} (\url{https://www.github.com/byxor/cv}).\\
 }
 \end{document}
