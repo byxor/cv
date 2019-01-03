@@ -124,9 +124,9 @@ _events = [
 class Data:
     name = "Brandon Ibbotson"
     email = decode("oenaqba.voobgfba2@znvy.qph.vr")
-    website = "www.byxor.xyz"
-    github = "www.github.com/byxor"
-    stack_overflow = "www.stackoverflow.com/users/5601284"
+    website = "byxor.xyz"
+    github = "github.com/byxor"
+    stack_overflow = "stackoverflow.com/users/5601284"
     address = "Ballymena, Co. Antrim"
     skills = ["Test-Driven Development", "Agile", "Git"]
     primary_languages = _primary_languages
