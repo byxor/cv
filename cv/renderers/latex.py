@@ -142,7 +142,7 @@ def educations(educations):
         "",
         f"\\textbf{{{ed.type} {_escape(ed.name)}}}",
         "",
-        f"{{Find out more at \\url{{{ed.link}}}}}",
+        f"{{Find out more at \\href{{https://{ed.link}}}{{{ed.link}}}}}",
     ]
 
 
